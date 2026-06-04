@@ -443,6 +443,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#revert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リバート（Revert）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リベース（Rebase）
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -616,7 +638,7 @@
   <span class="md-ellipsis">
     
   
-    もっと使う（上級編・ワークツリー）
+    もっと使う（上級編）
   
 
     
@@ -799,6 +821,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#revert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リバート（Revert）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リベース（Rebase）
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -894,6 +938,24 @@
 <p class="admonition-title">これは少し上級の話</p>
 <p>最初は使わなくても大丈夫です。「2つのブランチを同時に開きたい」と思ったときの選択肢、と覚えておけば十分。
 くわしくは <a href="../advanced/">もっと使う（上級編）</a> を参照してください。</p>
+</div>
+<h3 id="revert"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 7a6.5 6.5 0 0 1 6.5 6.5 6.5 6.5 0 0 1-6.5 6.5H10v-2h3.5c2.5 0 4.5-2 4.5-4.5S16 9 13.5 9H7.83l3.08 3.09L9.5 13.5 4 8l5.5-5.5 1.42 1.41L7.83 7zM6 18h2v2H6z"/></svg></span> リバート（Revert）<a class="headerlink" href="#revert" title="Permanent link">&para;</a></h3>
+<p><strong>ある変更を「打ち消す」ための、新しいコミットを作ること</strong>です。
+過去を消すのではなく、「ここは取り消しました」という記録を新たに足すので、<strong>履歴が残り、比較的安全</strong>です。</p>
+<blockquote>
+<p>↩️ たとえ：書き間違えた行を消しゴムで消すのではなく、「さっきのは無しで」と新しい一行を足して訂正するイメージ。</p>
+</blockquote>
+<h3 id="rebase"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 8H12v5l4.28 2.54.72-1.21-3.5-2.08zM13 3a9 9 0 0 0-9 9H1l3.96 4.03L9 12H6a7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.9 8.9 0 0 0 13 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9"/></svg></span> リベース（Rebase）<a class="headerlink" href="#rebase" title="Permanent link">&para;</a></h3>
+<p><strong>コミットの並びを整理し直す（土台を付け替える）こと</strong>です。
+履歴をきれいに見せられますが、<strong>履歴を書き換える</strong>ため、扱いには注意が必要です。</p>
+<blockquote>
+<p>🧱 たとえ：積んだブロックを一度はずして、別の土台に積み直すイメージ。</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">リベースは共有ブランチで使わない</p>
+<p>みんなで使うブランチ（<code>main</code> など）でのリベースは、混乱のもとになります。
+基本は <strong>マージ</strong>（上の項目）でOK。リベースは自分だけのブランチで、共有する前の整理に使う程度に。
+どちらも、くわしい使い方は <a href="../advanced/">もっと使う（上級編）</a> を参照してください。</p>
 </div>
 <h2 id="_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8m0 6.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5m-4.5 0A1.5 1.5 0 0 1 9 12a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 6 12a1.5 1.5 0 0 1 1.5-1.5m9 0A1.5 1.5 0 0 1 18 12a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 15 12a1.5 1.5 0 0 1 1.5-1.5"/></svg></span> その他よく見る言葉<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>

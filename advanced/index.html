@@ -29,7 +29,7 @@
     
     
       
-        <title>もっと使う（上級編・ワークツリー） - はじめてのGitHub 入門ガイド</title>
+        <title>もっと使う（上級編） - はじめてのGitHub 入門ガイド</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              もっと使う（上級編・ワークツリー）
+              もっと使う（上級編）
             
           </span>
         </div>
@@ -445,7 +445,7 @@
   <span class="md-ellipsis">
     
   
-    もっと使う（上級編・ワークツリー）
+    もっと使う（上級編）
   
 
     
@@ -463,7 +463,7 @@
   <span class="md-ellipsis">
     
   
-    もっと使う（上級編・ワークツリー）
+    もっと使う（上級編）
   
 
     
@@ -584,6 +584,45 @@
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        やり直したいとき：リバートとリベース
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="やり直したいとき：リバートとリベース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リバート（revert）＝安全な取り消し
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リベース（rebase）＝履歴の並べ替え（要注意）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
         この章のまとめ
@@ -752,6 +791,45 @@
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
+        やり直したいとき：リバートとリベース
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="やり直したいとき：リバートとリベース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リバート（revert）＝安全な取り消し
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        リベース（rebase）＝履歴の並べ替え（要注意）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         この章のまとめ
       
     </span>
@@ -776,10 +854,10 @@
 
 
 
-<h1 id="_1">もっと使う（上級編・ワークツリー）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">もっと使う（上級編）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">この章のゴール</p>
-<p><strong>ワークツリー（worktree）</strong> が「何のための仕組みか」を理解し、必要なときに使えるようになること。</p>
+<p>一歩進んだ操作――<strong>ワークツリー（worktree）</strong> での並行作業と、<strong>リバート／リベース</strong> による取り消し・履歴整理――が分かること。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">ここは上級トピックです</p>
@@ -986,7 +1064,96 @@ git<span class="w"> </span>worktree<span class="w"> </span>remove<span class="w"
 <p>削除するフォルダに <strong>保存していない変更（未コミット）</strong> が残っていないか、先に確認しましょう。
 不安なときは「このワークツリー、消して大丈夫？」とClaudeに聞くと安心です。</p>
 </div>
-<h2 id="_7">この章のまとめ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_7"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 7a6.5 6.5 0 0 1 6.5 6.5 6.5 6.5 0 0 1-6.5 6.5H10v-2h3.5c2.5 0 4.5-2 4.5-4.5S16 9 13.5 9H7.83l3.08 3.09L9.5 13.5 4 8l5.5-5.5 1.42 1.41L7.83 7zM6 18h2v2H6z"/></svg></span> やり直したいとき：リバートとリベース<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>「あの変更を取り消したい」「履歴を整理したい」ときの代表が、<strong>リバート</strong> と <strong>リベース</strong> です。性質が違うので使い分けます。</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>方法</th>
+<th>安全度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ある変更を <strong>取り消したい</strong>（履歴は残ってOK）</td>
+<td><strong>リバート</strong></td>
+<td>🟢 安全（共有していてもOK）</td>
+</tr>
+<tr>
+<td>自分のブランチの <strong>履歴を整理したい</strong></td>
+<td><strong>リベース</strong></td>
+<td>🟠 注意（共有ブランチでは使わない）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="revert">リバート（revert）＝安全な取り消し<a class="headerlink" href="#revert" title="Permanent link">&para;</a></h3>
+<p>あるコミットを <strong>打ち消す新しいコミット</strong> を作ります。過去は消さず「取り消した記録」を足すので、共有していても安全です。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_5_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> CLIで操作</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>さっきのコミット（メモを追記）を取り消して（リバートして）。
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w">       </span><span class="c1"># 取り消したいコミットのID（先頭の英数字）を確認</span>
+git<span class="w"> </span>revert<span class="w"> </span>&lt;コミットID&gt;<span class="w">   </span><span class="c1"># そのコミットを打ち消す新しいコミットを作る</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">リバートも“変更を取り消す”操作です</p>
+<p>リバート自体は履歴を壊さず安全寄りですが、<strong>取り消す対象（コミット）を間違えない</strong> よう、実行前に確認しましょう。
+どれを取り消すか不安なときは、Claudeに「どのコミットを取り消せばいい？」と相談すると安心です。</p>
+</div>
+<h3 id="rebase">リベース（rebase）＝履歴の並べ替え（要注意）<a class="headerlink" href="#rebase" title="Permanent link">&para;</a></h3>
+<p>コミットの <strong>土台を付け替えて</strong> 履歴を整理します。きれいになりますが、履歴を書き換えるため注意が必要です。</p>
+<p><strong>マージとの違い</strong>：どちらも変更を合流させますが、<strong>履歴の残り方</strong> が違います。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 3a3 3 0 0 1 3 3c0 1.29-.81 2.39-1.96 2.81.54 5 5.04 5.96 7.15 6.15A2.985 2.985 0 0 1 18 13a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.31 0-2.43-.84-2.84-2-4.25-.2-5.72-1.81-7.16-3.61v1.78c1.17.41 2 1.52 2 2.83a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V8.83A2.99 2.99 0 0 1 4 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 12a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m11-2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> マージ：合流の歴史が残る</label><label for="__tabbed_6_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 8H12v5l4.28 2.54.72-1.21-3.5-2.08zM13 3a9 9 0 0 0-9 9H1l3.96 4.03L9 12H6a7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.9 8.9 0 0 0 13 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9"/></svg></span> リベース：一本道に積み直す</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<pre class="mermaid"><code>flowchart LR
+    A --&gt; B --&gt; C --&gt; M["M（合流）"]
+    B --&gt; D["D"] --&gt; E["E"] --&gt; F["F"] --&gt; M</code></pre>
+<p>分かれて・合流したことが記録に残る。<strong>安全</strong>で、共有ブランチでもOK。</p>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>flowchart LR
+    A --&gt; B --&gt; C --&gt; D2["D'"] --&gt; E2["E'"] --&gt; F2["F'"]</code></pre>
+<p>最初から一本道だったように整理。<strong>きれいだが履歴を書き換える</strong>。</p>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">迷ったらマージ</p>
+<p>共有ブランチではマージが基本です。リベースは「自分のブランチを、共有する前にきれいにする」上級技と考えてください。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">リベースは“破壊的操作”：共有ブランチでは使わない</p>
+<p>リベースは <strong>履歴を作り直す破壊的な操作</strong> です。特に、<strong>すでにGitHubへプッシュした／みんなが使うブランチ（<code>main</code> など）</strong> でのリベースは、他の人の作業と食い違い、混乱や事故の原因になります（やり直すには <code>--force</code> での上書きが必要になり、他人の履歴を壊しかねません）。
+リベースは <strong>自分だけのブランチで、まだプッシュしていない</strong> ときの整理にとどめましょう。
+迷ったら <strong>マージ</strong>（<a href="../collaboration/">共同作業の章</a>）にするか、Claudeに「これはリベースして大丈夫？」と相談を。</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_7_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> CLIで操作</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>このブランチ（自分専用です）を、main の最新に合わせてリベースして。
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>switch<span class="w"> </span>feature<span class="w">      </span><span class="c1"># 自分のブランチに移動</span>
+git<span class="w"> </span>rebase<span class="w"> </span>main<span class="w">         </span><span class="c1"># main の最新を土台にして積み直す</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">迷ったらリバート、または相談</p>
+<p>「取り消したい」だけなら、まずは <strong>安全なリバート</strong>。
+リベースは効果も影響も大きいので、不安なときはClaudeや詳しい人に相談しましょう。</p>
+</div>
+<h2 id="_8">この章のまとめ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <figure>
   <img alt="複数プロジェクトを整理するイメージ" src="../images/illustrations/organizing-projects.svg" width="320" />
 <br />
@@ -996,6 +1163,7 @@ git<span class="w"> </span>worktree<span class="w"> </span>remove<span class="w"
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> ワークツリーは「同じrepoを複数フォルダで同時に開く」仕組み</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 急な差し込みや見比べに便利</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 作る／一覧／片付けの流れが分かった</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> リバート＝安全な取り消し、リベース＝履歴整理（共有では注意）が分かった</li>
 </ul>
 <div class="admonition success">
 <p class="admonition-title">次のステップ</p>
