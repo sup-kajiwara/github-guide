@@ -36,12 +36,28 @@ flowchart LR
 
     どんなブランチ名がいいかも相談できます（例：`add-photos`、`update-readme`）。
 
-=== ":material-cursor-default-click-outline: 自分で操作（VSCode）"
+=== ":material-microsoft-visual-studio-code: VSCodeで操作"
 
     1. VSCode左下の **ブランチ名（例：`main`）** をクリック
     2. **＋ 新しいブランチの作成** を選ぶ
     3. ブランチ名を入れる（例：`fix-typo`）
     4. そのブランチに切り替わる
+
+=== ":material-console: CLIで操作"
+
+    ```bash
+    # fix-typo ブランチを作って、そのブランチに切り替える
+    git switch -c fix-typo
+    ```
+
+    !!! note
+        いまどのブランチにいるかは `git branch` で確認できます（`*` が付いているのが現在地）。
+
+=== ":material-web: GitHubサイトで操作"
+
+    1. リポジトリ画面の左上、**ブランチ切り替えのボタン**（`main ▾`）を押す
+    2. 入力欄に新しい名前（例：`fix-typo`）を入れる
+    3. **Create branch: fix-typo** を押す
 
 !!! note "ブランチ名のつけ方"
     「何をするか」が分かる名前にします。例：`fix-typo`（誤字直し）、`add-photos`（写真追加）。
@@ -60,7 +76,25 @@ flowchart LR
     タイトルと説明も、変更内容に合わせて書いて。
     ```
 
-=== ":material-cursor-default-click-outline: 自分で操作（GitHubサイト）"
+=== ":material-microsoft-visual-studio-code: VSCodeで操作"
+
+    VSCodeの拡張機能 **「GitHub Pull Requests」** を入れると、VSCodeからPRを作れます。
+
+    1. 拡張機能で **`GitHub Pull Requests`** を検索してインストール
+    2. 左側に増える **PRアイコン** から **Create Pull Request** を押す
+    3. タイトル・説明を書いて **Create** を押す
+
+=== ":material-console: CLIで操作"
+
+    ```bash
+    # いまのブランチの内容でプルリクを作成（タイトル等は対話で入力／--fillで自動）
+    gh pr create --fill
+    ```
+
+    !!! note
+        `gh`（GitHub CLI）が必要です。作成後、URLが表示されるのでブラウザで確認できます。
+
+=== ":material-web: GitHubサイトで操作"
 
     1. リポジトリの画面を開くと **Compare & pull request** ボタンが出る → 押す
     2. **タイトル** と **説明**（何を・なぜ変えたか）を書く
@@ -82,17 +116,10 @@ flowchart LR
   <figcaption>「これでOK」となったら本体に取り込む</figcaption>
 </figure>
 
-**レビューする側：**
+基本の流れ（レビューする側 → マージする側）：
 
-1. プルリクの **Files changed** で変更点を確認
-2. 気づいた点は **コメント** を書く
-3. 問題なければ **Approve（承認）**
-
-**マージする側：**
-
-1. 承認されたら **Merge pull request** を押す
-2. **Confirm merge** で確定
-3. 使い終わったブランチは **Delete branch** で片付けてOK
+1. **レビュー**：変更点（Files changed）を確認し、気づきはコメント、問題なければ **Approve（承認）**
+2. **マージ**：承認されたら本体に合流させ、使い終わったブランチは片付ける
 
 === ":material-robot-happy-outline: Claudeに頼む"
 
@@ -101,9 +128,24 @@ flowchart LR
     使い終わったブランチも消して。
     ```
 
-=== ":material-cursor-default-click-outline: 自分で操作（GitHubサイト）"
+=== ":material-microsoft-visual-studio-code: VSCodeで操作"
 
-    上の手順どおり、**Approve → Merge pull request → Confirm merge** と進めます。
+    「GitHub Pull Requests」拡張のPR一覧から対象を開き、
+    画面内の **Approve（承認）** や **Merge Pull Request** のボタンで操作できます。
+
+=== ":material-console: CLIで操作"
+
+    ```bash
+    gh pr checks      # 確認（任意）
+    gh pr merge       # マージ（やり方を対話で選択。--merge 等でも指定可）
+    ```
+
+=== ":material-web: GitHubサイトで操作"
+
+    1. プルリクの **Files changed** で変更点を確認
+    2. 問題なければ **Review changes → Approve**
+    3. **Merge pull request → Confirm merge** で本体に反映
+    4. 使い終わったブランチは **Delete branch** で片付ける
 
 !!! warning "マージの前に"
     マージは「本体に反映する」操作です。**内容を確認してから** 行いましょう。

@@ -99,7 +99,7 @@ flowchart TD
     Claudeがフォルダの作成と切り替えを進めてくれます。
     どこに作るか・名前をどうするかも相談できます。
 
-=== ":material-console: 自分でコマンド（VSCodeのターミナル）"
+=== ":material-console: CLIで操作"
 
     VSCodeのメニュー「ターミナル」→「新しいターミナル」で、次を実行します。
 
@@ -189,7 +189,7 @@ flowchart LR
     もう使わない myrepo-feature のワークツリーは片付けて。
     ```
 
-=== ":material-console: 自分でコマンド"
+=== ":material-console: CLIで操作"
 
     ```bash
     # いまあるワークツリーの一覧

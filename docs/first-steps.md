@@ -8,7 +8,12 @@
   <figcaption>まずは「ファイルを入れる箱」を1つ用意します</figcaption>
 </figure>
 
-このページから、操作を **「🤖 Claudeに頼む」** と **「🖱️ 自分で操作」** の2通りで並べます。やりやすい方を選んでください。
+このページから、操作を **4通り** で並べます。やりやすいものを選んでください（すべてを覚える必要はありません）。
+
+- :material-robot-happy-outline: **Claudeに頼む** … VSCodeの中で日本語でお願いする（いちばん簡単）
+- :material-microsoft-visual-studio-code: **VSCodeで操作** … VSCodeの画面のボタンで操作する
+- :material-console: **CLIで操作** … コマンドを打つ（慣れた人向け）
+- :material-web: **GitHubサイトで操作** … ブラウザでGitHubの画面を操作する
 
 ```mermaid
 flowchart LR
@@ -16,6 +21,10 @@ flowchart LR
     B --> C[3.README<br/>を書く]
     C --> D([自分の置き場が完成 🎉])
 ```
+
+!!! tip "CLI（コマンド）は無理しなくてOK"
+    `:material-console: CLIで操作` は、コマンド入力に慣れた人向けの参考です。
+    難しく感じたら、**Claude** か **VSCode** か **GitHubサイト** のタブを使えば大丈夫です。
 
 ---
 
@@ -25,17 +34,34 @@ flowchart LR
 
 === ":material-robot-happy-outline: Claudeに頼む"
 
-    VSCodeでClaudeにこんなふうにお願いします。
-
     ```text
     GitHubに「my-first-repo」という名前で新しいリポジトリを作って。
     READMEファイルも付けて、最初は自分だけが見られる設定にして。
     ```
 
     Claudeが手順を進め、確認が必要なところは聞いてくれます。
-    指示どおり進めれば、リポジトリができあがります。
 
-=== ":material-cursor-default-click-outline: 自分で操作（GitHubサイト）"
+=== ":material-microsoft-visual-studio-code: VSCodeで操作"
+
+    1. 空のフォルダを用意して、VSCodeで開く（**ファイル → フォルダーを開く**）
+    2. 左の **ソース管理（枝アイコン :material-source-branch:）** を開く
+    3. **リポジトリの初期化** を押す
+    4. 続いて出てくる **GitHubに公開（Publish to GitHub）** を押す
+    5. リポジトリ名と公開範囲（**Private＝自分だけ** がおすすめ）を選ぶ
+
+=== ":material-console: CLIで操作"
+
+    GitHub CLI（`gh`）を使うと、1行で作れます。
+
+    ```bash
+    # privateリポジトリを作り、READMEも付けて、手元にコピー(clone)する
+    gh repo create my-first-repo --private --add-readme --clone
+    ```
+
+    !!! note
+        `gh` が入っていない場合は、Claudeに `gh コマンドを使えるようにして` と頼むか、他のタブの方法を使ってください。
+
+=== ":material-web: GitHubサイトで操作"
 
     1. [github.com](https://github.com) にログイン
     2. 右上の **＋** → **New repository** を押す
@@ -69,9 +95,29 @@ flowchart LR
     ```
 
     「ファイル作成 → 記録（コミット）→ アップロード（プッシュ）」まで、まとめてお願いできます。
-    （コミット・プッシュは次章でくわしく説明します）
 
-=== ":material-cursor-default-click-outline: 自分で操作（GitHubサイト）"
+=== ":material-microsoft-visual-studio-code: VSCodeで操作"
+
+    1. エクスプローラーで **新しいファイル** を作る（例：`メモ.txt`）
+    2. 中に文章を書いて **保存**（`Ctrl`/`⌘` + `S`）
+    3. GitHubへ反映する操作（コミット・プッシュ）は次章でくわしく説明します
+
+    👉 [変更を記録する（コミット）](commit-push.md)
+
+=== ":material-console: CLIで操作"
+
+    ```bash
+    # ファイルを作って、記録(コミット)し、GitHubへ反映(プッシュ)する
+    echo "はじめてのファイルです" > メモ.txt
+    git add メモ.txt
+    git commit -m "メモを追加"
+    git push
+    ```
+
+    !!! note
+        `add`／`commit`／`push` の意味は [次章](commit-push.md) でくわしく説明します。
+
+=== ":material-web: GitHubサイトで操作"
 
     1. リポジトリの画面で **Add file** → **Create new file** を押す
     2. 上のほうにファイル名を入れる（例：`メモ.txt`）
@@ -97,7 +143,32 @@ flowchart LR
     自分の名前（ニックネームでOK）を見出し付きで書いて。
     ```
 
-=== ":material-cursor-default-click-outline: 自分で操作（GitHubサイト）"
+=== ":material-microsoft-visual-studio-code: VSCodeで操作"
+
+    1. `README.md` を開く（なければ新規作成）
+    2. 次のように書いて **保存**
+
+        ```markdown
+        # 練習用リポジトリ
+
+        これはGitHubの練習用リポジトリです。
+        ```
+
+    3. コミット・プッシュでGitHubへ反映（→ [次章](commit-push.md)）
+
+=== ":material-console: CLIで操作"
+
+    ```bash
+    # READMEを書き換えて、記録・反映する
+    echo "# 練習用リポジトリ" > README.md
+    echo "" >> README.md
+    echo "これはGitHubの練習用リポジトリです。" >> README.md
+    git add README.md
+    git commit -m "READMEに説明を追加"
+    git push
+    ```
+
+=== ":material-web: GitHubサイトで操作"
 
     1. リポジトリ内の **README.md** を開く
     2. 右上の **鉛筆アイコン（Edit）** を押す
