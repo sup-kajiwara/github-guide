@@ -67,6 +67,8 @@ markdown_extensions:
   - pymdownx.emoji:           # :material-xxx: などのアイコンを本文で使えるように
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:       # - [ ] / - [x] をチェックボックスで表示
+      custom_checkbox: true
   - attr_list                # 画像サイズ指定などの属性
   - md_in_html
   - toc:
