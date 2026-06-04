@@ -1,10 +1,9 @@
 # ===== サイト全体の設定 =====
 site_name: はじめてのGitHub 入門ガイド
-site_description: 非エンジニア向け・GitHubをやさしく学ぶ社内資料
-site_author: サポータス
-# GitHub Pages で公開するときのURL（公開先が決まったら書き換えます）
-# 例: https://組織名.github.io/github-guide/
-site_url: ""
+site_description: 非エンジニア向け・GitHubをやさしく学ぶ入門ガイド
+site_author: はじめてのGitHub 入門ガイド
+# GitHub Pages で公開するときのURL
+site_url: "https://sup-kajiwara.github.io/github-guide/"
 
 # ===== 見た目（Material テーマ）=====
 theme:
@@ -72,4 +71,4 @@ markdown_extensions:
       permalink: true        # 見出しにリンクアイコンを付与
 
 # ===== フッター =====
-copyright: © サポータス 社内向け資料
+copyright: © はじめてのGitHub 入門ガイド
