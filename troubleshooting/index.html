@@ -319,6 +319,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../setup-pc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCの準備（VSCode・Git・Claude）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../first-steps/" class="md-nav__link">
         
   
@@ -555,19 +582,55 @@
 
 
 <h1 id="qa">困ったときのQ&amp;A<a class="headerlink" href="#qa" title="Permanent link">&para;</a></h1>
+<figure>
+  <img alt="よくある質問のイメージ" src="../images/illustrations/faq.svg" width="300" />
+<br />
+<figcaption>つまずきやすいポイントと、その対処をまとめます</figcaption>
+</figure>
 <p>よくあるつまずきと、その対処をまとめます。（順次追記していきます）</p>
+<div class="admonition tip">
+<p class="admonition-title">まず試したいこと</p>
+<p>操作に迷ったら、VSCodeのClaudeに <strong>「いまの状況：◯◯。どうすればいい？」</strong> と日本語で聞いてみてください。
+画面の状態に合わせて、次の一手を教えてくれます。</p>
+</div>
 <h2 id="_1">よくある質問<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>間違えてコミットしてしまった。元に戻せる？</summary>
-<p>（ここに回答を書きます）</p>
+<p>多くの場合、戻せます。コミットは「セーブポイント」なので、前の状態に戻る道があります。</p>
+<ul>
+<li><strong>Claudeに頼む</strong>：<code>さっきのコミットを取り消して、1つ前の状態に戻して</code> とお願いする</li>
+<li><strong>自分で</strong>：直前なら、VSCodeのソース管理の <strong>「...」メニュー → 前のコミットを元に戻す（Undo Last Commit）</strong> で取り消せます</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">あわてず、まず確認</p>
+<p>すでにプッシュ（GitHubへ反映）した後は、戻し方が変わります。
+不安なときは操作する前に、詳しい人かClaudeに相談しましょう。</p>
+</div>
 </details>
 <details class="question">
 <summary>「最新版」がどれか分からなくなった</summary>
-<p>（ここに回答を書きます）</p>
+<p>GitHub上が「正」です。ブラウザでリポジトリを開き、ファイルの <strong>コミット履歴（History）</strong> を見れば、最後に更新された内容と日時が分かります。</p>
+<ul>
+<li>手元（PC）を最新にしたいときは <strong>プル（Pull）</strong>：<code>GitHubの最新の状態を取り込んで</code> とClaudeに頼むか、VSCodeの <strong>同期（Sync）</strong> を押します。</li>
+</ul>
 </details>
 <details class="question">
 <summary>英語ばかりで何を押せばいいか分からない</summary>
-<p>（ここに回答を書きます：主要ボタンの和訳一覧）</p>
+<p>主要なボタンは下の <strong>早見表</strong> にまとめてあります。
+また、VSCodeは設定で <strong>日本語表示</strong> にできます（→ <a href="../setup-pc/">PCの準備</a>）。</p>
+</details>
+<details class="question">
+<summary>プッシュしようとしたらエラーが出た / 認証を求められた</summary>
+<p>多くは <strong>GitHubへのサインインが切れている</strong> ことが原因です。</p>
+<ol>
+<li>VSCode左下の <strong>アカウントアイコン</strong> からサインインし直す（→ <a href="../setup-pc/">PCの準備</a>）</li>
+<li>それでも出るエラーは、メッセージをそのままClaudeに貼って <code>このエラーの意味と直し方を教えて</code> と聞くのが早いです</li>
+</ol>
+</details>
+<details class="question">
+<summary>ファイルを消してしまった！</summary>
+<p>GitHubに一度でも反映していれば、過去のコミットから復元できます。
+<code>消したファイル ◯◯ を、前のコミットから元に戻して</code> とClaudeに頼むか、GitHub上の履歴から復元します。</p>
 </details>
 <h2 id="_2">用語・ボタン早見表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
@@ -579,7 +642,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Repository</td>
+<td>Repository（repo）</td>
 <td>リポジトリ（ファイル置き場）</td>
 </tr>
 <tr>
@@ -606,11 +669,49 @@
 <td>Pull Request</td>
 <td>変更の確認依頼</td>
 </tr>
+<tr>
+<td>Sign in</td>
+<td>サインイン（ログイン）</td>
+</tr>
+<tr>
+<td>Settings</td>
+<td>設定</td>
+</tr>
+<tr>
+<td>Create / Add</td>
+<td>作成／追加</td>
+</tr>
+<tr>
+<td>Edit</td>
+<td>編集</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>削除</td>
+</tr>
+<tr>
+<td>Confirm</td>
+<td>確定する</td>
+</tr>
 </tbody>
 </table>
+<figure>
+  <img alt="サポートを受けるイメージ" src="../images/illustrations/active-support.svg" width="300" />
+<br />
+<figcaption>解決しないときは、ひとりで抱えこまないで</figcaption>
+</figure>
 <div class="admonition tip">
 <p class="admonition-title">それでも解決しないとき</p>
-<p>社内の詳しい人に聞く、または公式ヘルプ（日本語あり）を参照しましょう。</p>
+<ul>
+<li>VSCodeのClaudeに、<strong>状況とエラーメッセージをそのまま</strong> 伝えて相談する</li>
+<li>社内の詳しい人に聞く</li>
+<li>公式ヘルプ（日本語あり）を参照する</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">おつかれさまでした</p>
+<p>ここまでで、GitHubの基本（アカウント作成 → 準備 → リポジトリ → コミット → 共同作業）が一通り分かりました。
+あとは、実際に手を動かしながら少しずつ慣れていきましょう 🎉</p>
 </div>
 
 

@@ -321,6 +321,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../setup-pc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCの準備（VSCode・Git・Claude）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../first-steps/" class="md-nav__link">
         
   
@@ -467,6 +494,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        この章のまとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -561,6 +599,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        この章のまとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -581,17 +630,126 @@
 <h1 id="_1">みんなで使う（プルリク・マージ）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">この章のゴール</p>
-<p>複数人で安全に共同作業する流れ（ブランチ → プルリクエスト → マージ）が分かること。</p>
+<p>複数人で安全に共同作業する流れ（<strong>ブランチ → プルリクエスト → マージ</strong>）が分かること。</p>
 </div>
-<h2 id="1">1. ブランチを作る<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>（ここに手順を書きます：本体を守りながら作業する考え方）</p>
-<h2 id="2">2. 変更してプルリクエストを出す<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>（ここに手順を書きます：Pull Request の作り方・レビュー依頼）</p>
-<h2 id="3">3. レビューしてマージする<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>（ここに手順を書きます：コメント・承認・マージの流れ）</p>
+<figure>
+  <img alt="変更をレビューするイメージ" src="../images/illustrations/code-review.svg" width="320" />
+<br />
+<figcaption>いきなり本体を変えず、「相談してから反映」が基本</figcaption>
+</figure>
+<p>全体の流れはこうです。</p>
+<pre class="mermaid"><code>flowchart LR
+    A[本体&lt;br/&gt;main] --&gt; B[1.ブランチ&lt;br/&gt;作業用の枝 🌿]
+    B --&gt; C[2.プルリク&lt;br/&gt;確認のお願い 🙋]
+    C --&gt; D[3.レビュー＆&lt;br/&gt;マージ 🔀]
+    D --&gt; A</code></pre>
 <div class="admonition tip">
 <p class="admonition-title">おすすめの進め方</p>
-<p>いきなり本体を変えず、「ブランチで作業 → プルリクで相談 → マージ」の流れを習慣にすると安全です。</p>
+<p>いきなり本体を変えず、「<strong>ブランチで作業 → プルリクで相談 → マージ</strong>」の流れを習慣にすると安全です。</p>
+</div>
+<hr />
+<h2 id="1">1. ブランチを作る<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p><strong>ブランチ</strong>は「作業用の分かれ道」です（→ <a href="../glossary/">用語集</a>）。
+本体（みんなが使う版＝<code>main</code>）に影響を与えずに、別の場所で安心して作業できます。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span> 自分で操作（VSCode）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>「fix-typo」という名前のブランチを作って、そっちに切り替えて。
+</code></pre></div>
+<p>どんなブランチ名がいいかも相談できます（例：<code>add-photos</code>、<code>update-readme</code>）。</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>VSCode左下の <strong>ブランチ名（例：<code>main</code>）</strong> をクリック</li>
+<li><strong>＋ 新しいブランチの作成</strong> を選ぶ</li>
+<li>ブランチ名を入れる（例：<code>fix-typo</code>）</li>
+<li>そのブランチに切り替わる</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">ブランチ名のつけ方</p>
+<p>「何をするか」が分かる名前にします。例：<code>fix-typo</code>（誤字直し）、<code>add-photos</code>（写真追加）。</p>
+</div>
+<hr />
+<h2 id="2">2. 変更してプルリクエストを出す<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>ブランチで変更・コミット・プッシュしたら（→ <a href="../commit-push/">コミットの章</a>）、
+<strong>プルリクエスト（PR）</strong> で「この変更を本体に入れていいですか？」と相談します。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span> 自分で操作（GitHubサイト）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>いまのブランチの変更で、プルリクエストを作って。
+タイトルと説明も、変更内容に合わせて書いて。
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>リポジトリの画面を開くと <strong>Compare &amp; pull request</strong> ボタンが出る → 押す</li>
+<li><strong>タイトル</strong> と <strong>説明</strong>（何を・なぜ変えたか）を書く</li>
+<li><strong>Create pull request</strong> を押す</li>
+<li>確認してほしい人がいれば <strong>Reviewers</strong> で指定する</li>
+</ol>
+<div class="admonition quote">
+<p class="admonition-title">📷 画面キャプチャ枠（あとで差し込み）</p>
+<p>プルリクエスト作成画面を入れます。
+<code>![プルリクの作成](images/collab-01-pr.png){ width="700" }</code></p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="3">3. レビューしてマージする<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>ほかの人に見てもらい（<strong>レビュー</strong>）、OKなら本体に合流（<strong>マージ</strong>）します。</p>
+<figure>
+  <img alt="合意してマージするイメージ" src="../images/illustrations/agree.svg" width="300" />
+<br />
+<figcaption>「これでOK」となったら本体に取り込む</figcaption>
+</figure>
+<p><strong>レビューする側：</strong></p>
+<ol>
+<li>プルリクの <strong>Files changed</strong> で変更点を確認</li>
+<li>気づいた点は <strong>コメント</strong> を書く</li>
+<li>問題なければ <strong>Approve（承認）</strong></li>
+</ol>
+<p><strong>マージする側：</strong></p>
+<ol>
+<li>承認されたら <strong>Merge pull request</strong> を押す</li>
+<li><strong>Confirm merge</strong> で確定</li>
+<li>使い終わったブランチは <strong>Delete branch</strong> で片付けてOK</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span> 自分で操作（GitHubサイト）</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>このプルリクをレビューして、問題がなければマージして。
+使い終わったブランチも消して。
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>上の手順どおり、<strong>Approve → Merge pull request → Confirm merge</strong> と進めます。</p>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">マージの前に</p>
+<p>マージは「本体に反映する」操作です。<strong>内容を確認してから</strong> 行いましょう。
+不安なときは、詳しい人やClaudeに「この変更、マージして大丈夫？」と聞くと安心です。</p>
+</div>
+<hr />
+<h2 id="_2">この章のまとめ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    A[🌿 ブランチで作業] --&gt; B[🙋 プルリクで相談]
+    B --&gt; C[👀 レビュー]
+    C --&gt; D[🔀 マージで反映]</code></pre>
+<ul>
+<li>[x] ブランチで安全に作業できる</li>
+<li>[x] プルリクで相談できる</li>
+<li>[x] レビューしてマージできる</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">次のステップ</p>
+<p>共同作業の流れがつかめました。最後に、<strong>困ったときの対処</strong> をまとめておきます。</p>
+<p>👉 <a href="../troubleshooting/">困ったときのQ&amp;A</a></p>
 </div>
 
 
