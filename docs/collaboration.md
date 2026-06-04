@@ -76,6 +76,9 @@ flowchart LR
     タイトルと説明も、変更内容に合わせて書いて。
     ```
 
+    !!! note "Claudeも内部で `gh` を使います"
+        プルリク作成には `gh`（GitHub CLI）が使われます。未導入なら Claudeに **「`gh` を入れて」** と頼むか、[PCの準備（GitHub CLI）](setup-pc.md#github-cli-gh) を参照してください。
+
 === ":material-microsoft-visual-studio-code: VSCodeで操作"
 
     VSCodeの拡張機能 **「GitHub Pull Requests」** を入れると、VSCodeからPRを作れます。
@@ -91,8 +94,9 @@ flowchart LR
     gh pr create --fill
     ```
 
-    !!! note
-        `gh`（GitHub CLI）が必要です。作成後、URLが表示されるのでブラウザで確認できます。
+    !!! note "`gh`（GitHub CLI）の準備"
+        このタブには **GitHub CLI（`gh`）** が必要です（入れ方は [PCの準備（GitHub CLI）](setup-pc.md#github-cli-gh)）。
+        作成後、URLが表示されるのでブラウザで確認できます。
 
 === ":material-web: GitHubサイトで操作"
 

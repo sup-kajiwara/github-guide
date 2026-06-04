@@ -41,6 +41,9 @@ flowchart LR
 
     Claudeが手順を進め、確認が必要なところは聞いてくれます。
 
+    !!! note "Claudeも内部で `gh` を使います"
+        リポジトリ作成には `gh`（GitHub CLI）が使われます。未導入でも、Claudeに **「`gh` を入れて」** と頼めば導入から進めてくれます（→ [PCの準備（GitHub CLI）](setup-pc.md#github-cli-gh)）。
+
 === ":material-microsoft-visual-studio-code: VSCodeで操作"
 
     1. 空のフォルダを用意して、VSCodeで開く（**ファイル → フォルダーを開く**）
@@ -58,8 +61,9 @@ flowchart LR
     gh repo create my-first-repo --private --add-readme --clone
     ```
 
-    !!! note
-        `gh` が入っていない場合は、Claudeに `gh コマンドを使えるようにして` と頼むか、他のタブの方法を使ってください。
+    !!! note "`gh`（GitHub CLI）の準備"
+        このタブには **GitHub CLI（`gh`）** が必要です。入れ方は [PCの準備（GitHub CLI）](setup-pc.md#github-cli-gh) を参照してください。
+        未導入なら、**Claudeに頼む**か、他のタブ（VSCode／GitHubサイト）の方法でもOKです。
 
 === ":material-web: GitHubサイトで操作"
 
