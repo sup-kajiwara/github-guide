@@ -725,6 +725,10 @@ git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </sp
 <div class="highlight"><pre><span></span><code>いまのブランチの変更で、プルリクエストを作って。
 タイトルと説明も、変更内容に合わせて書いて。
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Claudeも内部で <code>gh</code> を使います</p>
+<p>プルリク作成には <code>gh</code>（GitHub CLI）が使われます。未導入なら Claudeに <strong>「<code>gh</code> を入れて」</strong> と頼むか、<a href="../setup-pc/#github-cli-gh">PCの準備（GitHub CLI）</a> を参照してください。</p>
+</div>
 </div>
 <div class="tabbed-block">
 <p>VSCodeの拡張機能 <strong>「GitHub Pull Requests」</strong> を入れると、VSCodeからPRを作れます。</p>
@@ -739,8 +743,9 @@ git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </sp
 gh<span class="w"> </span>pr<span class="w"> </span>create<span class="w"> </span>--fill
 </code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>gh</code>（GitHub CLI）が必要です。作成後、URLが表示されるのでブラウザで確認できます。</p>
+<p class="admonition-title"><code>gh</code>（GitHub CLI）の準備</p>
+<p>このタブには <strong>GitHub CLI（<code>gh</code>）</strong> が必要です（入れ方は <a href="../setup-pc/#github-cli-gh">PCの準備（GitHub CLI）</a>）。
+作成後、URLが表示されるのでブラウザで確認できます。</p>
 </div>
 </div>
 <div class="tabbed-block">
