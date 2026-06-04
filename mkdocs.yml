@@ -1,0 +1,75 @@
+# ===== サイト全体の設定 =====
+site_name: はじめてのGitHub 入門ガイド
+site_description: 非エンジニア向け・GitHubをやさしく学ぶ社内資料
+site_author: サポータス
+# GitHub Pages で公開するときのURL（公開先が決まったら書き換えます）
+# 例: https://組織名.github.io/github-guide/
+site_url: ""
+
+# ===== 見た目（Material テーマ）=====
+theme:
+  name: material
+  language: ja               # 画面表示を日本語に
+  features:
+    - navigation.instant     # ページ遷移を高速に
+    - navigation.top         # 「トップへ戻る」ボタン
+    - navigation.footer      # 前/次ページへのリンク
+    - search.highlight       # 検索ヒット箇所をハイライト
+    - search.suggest         # 検索の候補表示
+    - content.code.copy      # コードのコピーボタン
+    - toc.follow             # 目次が読んでいる位置に追従
+  palette:
+    # ライトモード
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: ダークモードに切り替え
+    # ダークモード
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードに切り替え
+
+# images/ 配下（スクショ置き場）はメニューに出さない
+not_in_nav: |
+  /images/
+
+# ===== サイドメニューの構成（章立て）=====
+nav:
+  - はじめに: index.md
+  - 用語集（まずはここから）: glossary.md
+  - アカウント作成と初期設定: account-setup.md
+  - 最初の一歩（リポジトリを作る）: first-steps.md
+  - 変更を記録する（コミット）: commit-push.md
+  - みんなで使う（プルリク・マージ）: collaboration.md
+  - 困ったときのQ&A: troubleshooting.md
+
+# ===== 検索機能 =====
+plugins:
+  - search
+
+# ===== Markdownの拡張機能（注釈ボックスや表などを使えるように）=====
+markdown_extensions:
+  - admonition               # !!! note のような注釈ボックス
+  - pymdownx.details         # 折りたたみ
+  - pymdownx.superfences:     # コードブロックの強化＋図（Mermaid）対応
+      custom_fences:
+        - name: mermaid       # ```mermaid``` で流れ図・シーケンス図を描ける
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:          # タブ切り替え（例：ブラウザ操作とVSCode操作を並べる）
+      alternate_style: true
+  - pymdownx.emoji:           # :material-xxx: などのアイコンを本文で使えるように
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list                # 画像サイズ指定などの属性
+  - md_in_html
+  - toc:
+      permalink: true        # 見出しにリンクアイコンを付与
+
+# ===== フッター =====
+copyright: © サポータス 社内向け資料
