@@ -678,7 +678,7 @@
 <h2 id="1">1. ブランチを作る<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p><strong>ブランチ</strong>は「作業用の分かれ道」です（→ <a href="../glossary/">用語集</a>）。
 本体（みんなが使う版＝<code>main</code>）に影響を与えずに、別の場所で安心して作業できます。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span> 自分で操作（VSCode）</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.86.86 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> VSCodeで操作</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> CLIで操作</label><label for="__tabbed_1_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> GitHubサイトで操作</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>「fix-typo」という名前のブランチを作って、そっちに切り替えて。
@@ -693,6 +693,22 @@
 <li>そのブランチに切り替わる</li>
 </ol>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># fix-typo ブランチを作って、そのブランチに切り替える</span>
+git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>fix-typo
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>いまどのブランチにいるかは <code>git branch</code> で確認できます（<code>*</code> が付いているのが現在地）。</p>
+</div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>リポジトリ画面の左上、<strong>ブランチ切り替えのボタン</strong>（<code>main ▾</code>）を押す</li>
+<li>入力欄に新しい名前（例：<code>fix-typo</code>）を入れる</li>
+<li><strong>Create branch: fix-typo</strong> を押す</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="admonition note">
@@ -703,12 +719,29 @@
 <h2 id="2">2. 変更してプルリクエストを出す<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>ブランチで変更・コミット・プッシュしたら（→ <a href="../commit-push/">コミットの章</a>）、
 <strong>プルリクエスト（PR）</strong> で「この変更を本体に入れていいですか？」と相談します。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span> 自分で操作（GitHubサイト）</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.86.86 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> VSCodeで操作</label><label for="__tabbed_2_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> CLIで操作</label><label for="__tabbed_2_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> GitHubサイトで操作</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>いまのブランチの変更で、プルリクエストを作って。
 タイトルと説明も、変更内容に合わせて書いて。
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>VSCodeの拡張機能 <strong>「GitHub Pull Requests」</strong> を入れると、VSCodeからPRを作れます。</p>
+<ol>
+<li>拡張機能で <strong><code>GitHub Pull Requests</code></strong> を検索してインストール</li>
+<li>左側に増える <strong>PRアイコン</strong> から <strong>Create Pull Request</strong> を押す</li>
+<li>タイトル・説明を書いて <strong>Create</strong> を押す</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># いまのブランチの内容でプルリクを作成（タイトル等は対話で入力／--fillで自動）</span>
+gh<span class="w"> </span>pr<span class="w"> </span>create<span class="w"> </span>--fill
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>gh</code>（GitHub CLI）が必要です。作成後、URLが表示されるのでブラウザで確認できます。</p>
+</div>
 </div>
 <div class="tabbed-block">
 <ol>
@@ -733,19 +766,12 @@
 <br />
 <figcaption>「これでOK」となったら本体に取り込む</figcaption>
 </figure>
-<p><strong>レビューする側：</strong></p>
+<p>基本の流れ（レビューする側 → マージする側）：</p>
 <ol>
-<li>プルリクの <strong>Files changed</strong> で変更点を確認</li>
-<li>気づいた点は <strong>コメント</strong> を書く</li>
-<li>問題なければ <strong>Approve（承認）</strong></li>
+<li><strong>レビュー</strong>：変更点（Files changed）を確認し、気づきはコメント、問題なければ <strong>Approve（承認）</strong></li>
+<li><strong>マージ</strong>：承認されたら本体に合流させ、使い終わったブランチは片付ける</li>
 </ol>
-<p><strong>マージする側：</strong></p>
-<ol>
-<li>承認されたら <strong>Merge pull request</strong> を押す</li>
-<li><strong>Confirm merge</strong> で確定</li>
-<li>使い終わったブランチは <strong>Delete branch</strong> で片付けてOK</li>
-</ol>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.5 11 6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 0 0-1.52-.36l-.51.4-.71.57zm-.74-2.31a.76.76 0 0 0-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.9.9 0 0 0 .43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.76.76 0 0 0-.49-.18M15 10V8h5v2zm-1.17-5.24 2.83-2.83 1.41 1.41-2.83 2.83zM10 0h2v5h-2zM3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83zm0-11.32 1.41-1.41 2.83 2.83-1.41 1.41zM7 10H2V8h5z"/></svg></span> 自分で操作（GitHubサイト）</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.86.86 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> VSCodeで操作</label><label for="__tabbed_3_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> CLIで操作</label><label for="__tabbed_3_4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> GitHubサイトで操作</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>このプルリクをレビューして、問題がなければマージして。
@@ -753,7 +779,21 @@
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>上の手順どおり、<strong>Approve → Merge pull request → Confirm merge</strong> と進めます。</p>
+<p>「GitHub Pull Requests」拡張のPR一覧から対象を開き、
+画面内の <strong>Approve（承認）</strong> や <strong>Merge Pull Request</strong> のボタンで操作できます。</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>gh<span class="w"> </span>pr<span class="w"> </span>checks<span class="w">      </span><span class="c1"># 確認（任意）</span>
+gh<span class="w"> </span>pr<span class="w"> </span>merge<span class="w">       </span><span class="c1"># マージ（やり方を対話で選択。--merge 等でも指定可）</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>プルリクの <strong>Files changed</strong> で変更点を確認</li>
+<li>問題なければ <strong>Review changes → Approve</strong></li>
+<li><strong>Merge pull request → Confirm merge</strong> で本体に反映</li>
+<li>使い終わったブランチは <strong>Delete branch</strong> で片付ける</li>
+</ol>
 </div>
 </div>
 </div>
