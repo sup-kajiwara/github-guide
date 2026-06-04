@@ -17,6 +17,8 @@ theme:
     - search.suggest         # 検索の候補表示
     - content.code.copy      # コードのコピーボタン
     - toc.follow             # 目次が読んでいる位置に追従
+  icon:
+    logo: material/book-open-page-variant   # ヘッダーのロゴ（画像不要のアイコン）
   palette:
     # ライトモード
     - scheme: default
@@ -46,8 +48,11 @@ nav:
   - 最初の一歩（リポジトリを作る）: first-steps.md
   - 変更を記録する（コミット）: commit-push.md
   - みんなで使う（プルリク・マージ）: collaboration.md
+  - 練習：通しでやってみる: practice.md
   - もっと使う（上級編）: advanced.md
+  - 安全に使う: security.md
   - 困ったときのQ&A: troubleshooting.md
+  - 付録：Claudeの頼み方とMarkdown: appendix.md
 
 # ===== 検索機能 =====
 plugins:

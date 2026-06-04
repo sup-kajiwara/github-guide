@@ -73,6 +73,60 @@ flowchart LR
 4. ほかの人と一緒に作業する流れが分かる（プルリクエスト・マージ）
 5. 困ったときの調べ方が分かる
 
+## 各章へのご案内
+
+<div class="grid cards" markdown>
+
+-   :material-book-open-variant:{ .lg .middle } &nbsp;**用語集**
+
+    ---
+
+    まずは言葉のイメージをつかむ
+
+    [:octicons-arrow-right-24: 開く](glossary.md)
+
+-   :material-account-plus:{ .lg .middle } &nbsp;**アカウント作成**
+
+    ---
+
+    GitHubに登録して始める
+
+    [:octicons-arrow-right-24: 開く](account-setup.md)
+
+-   :material-laptop:{ .lg .middle } &nbsp;**PCの準備**
+
+    ---
+
+    VSCode・Git・Claudeを入れる
+
+    [:octicons-arrow-right-24: 開く](setup-pc.md)
+
+-   :material-rocket-launch:{ .lg .middle } &nbsp;**最初の一歩**
+
+    ---
+
+    リポジトリを作ってみる
+
+    [:octicons-arrow-right-24: 開く](first-steps.md)
+
+-   :material-school:{ .lg .middle } &nbsp;**練習**
+
+    ---
+
+    通しで1回やってみる
+
+    [:octicons-arrow-right-24: 開く](practice.md)
+
+-   :material-lifebuoy:{ .lg .middle } &nbsp;**困ったとき**
+
+    ---
+
+    つまずきと対処を見る
+
+    [:octicons-arrow-right-24: 開く](troubleshooting.md)
+
+</div>
+
 それでは、まず[用語集](glossary.md)から見ていきましょう。
 
 !!! quote "イラストについて"
