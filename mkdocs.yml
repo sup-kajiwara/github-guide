@@ -42,6 +42,7 @@ nav:
   - はじめに: index.md
   - 用語集（まずはここから）: glossary.md
   - アカウント作成と初期設定: account-setup.md
+  - PCの準備（VSCode・Git・Claude）: setup-pc.md
   - 最初の一歩（リポジトリを作る）: first-steps.md
   - 変更を記録する（コミット）: commit-push.md
   - みんなで使う（プルリク・マージ）: collaboration.md

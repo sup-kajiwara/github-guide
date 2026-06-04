@@ -147,7 +147,7 @@ flowchart LR
 
 !!! success "次のステップ"
     アカウントの準備ができました。
-    このガイドでは、これ以降の操作を **VSCode + Claude** を使って進めていきます。
-    次の章で、自分のファイル置き場（リポジトリ）を作ってみましょう。
+    このガイドでは、これ以降の操作を **VSCode + Claude** を使って進めます。
+    次は、お使いのPCに VSCode・Git・Claude を入れる準備をしましょう。
 
-    👉 [最初の一歩（リポジトリを作る）](first-steps.md)
+    👉 [PCの準備（VSCode・Git・Claude）](setup-pc.md)
