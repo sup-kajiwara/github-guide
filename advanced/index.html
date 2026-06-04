@@ -511,6 +511,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claudeと組み合わせると、もっと便利
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -627,6 +638,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claudeと組み合わせると、もっと便利
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -725,6 +747,33 @@
 <li><strong>ワークツリー</strong> … その枝を“別の机（フォルダ）で開く”仕組み</li>
 </ul>
 <p>ブランチが分かっていれば、ワークツリーは「その応用」です。</p>
+</div>
+<h2 id="claude"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeと組み合わせると、もっと便利<a class="headerlink" href="#claude" title="Permanent link">&para;</a></h2>
+<p><strong>結論：ワークツリーは、Claudeに作業を頼むスタイルと特に相性がよい仕組みです。</strong></p>
+<p><strong>理由：</strong> Claudeへのお願いは「いま開いているフォルダ」に対して進みます。
+フォルダを分けておけば、<strong>複数のお願いが互いにぶつからず</strong>、安心して同時に進められるからです。
+（1つのフォルダで何でも同時に頼むと、変更が混ざってしまいがちです。）</p>
+<p><strong>具体例：</strong></p>
+<ul>
+<li>「機能Aをこのフォルダで進めて」「急ぎの修正Bは別フォルダで」と <strong>並行してお願い</strong> できる</li>
+<li>片方でClaudeが作業している間に、もう片方で <strong>別の相談・別の作業</strong> を進められる</li>
+<li>フォルダごとに <strong>独立してコミット → プルリク</strong> できるので、後から整理しやすい</li>
+</ul>
+<pre class="mermaid"><code>flowchart TD
+    C{{Claudeに頼む}} --&gt; FA[フォルダA&lt;br/&gt;🌿 機能Aを作成]
+    C --&gt; FB[フォルダB&lt;br/&gt;🔧 急ぎの修正B]
+    FA --&gt; PA[独立してコミット・プルリク]
+    FB --&gt; PB[独立してコミット・プルリク]</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">頼み方の例</p>
+<div class="highlight"><pre><span></span><code>機能A用と修正B用に、それぞれワークツリー（別フォルダ）を用意して。
+まず修正Bのフォルダを開いて、そっちから直していこう。
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">増やしすぎに注意</p>
+<p>フォルダを増やしすぎると、どれがどれだか分からなくなります。
+目安は <strong>「同時に進めたいものが2〜3個あるとき」</strong>。迷ったらClaudeに「いまのワークツリーの状況を整理して」と聞けます。</p>
 </div>
 <h2 id="_4">ワークツリーを作ってみる<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>ためしに、<code>feature</code> ブランチを別フォルダで開いてみます。</p>
