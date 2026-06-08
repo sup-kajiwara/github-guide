@@ -726,6 +726,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#bash-inout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bash の「入力（IN）」と「出力（OUT）」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -825,6 +836,17 @@
   
     <nav class="md-nav" aria-label="Claude操作中によく出てくる言葉（道具の名前）">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bash-inout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bash の「入力（IN）」と「出力（OUT）」
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
@@ -989,6 +1011,41 @@
 </tr>
 </tbody>
 </table>
+<h3 id="bash-inout">Bash の「入力（IN）」と「出力（OUT）」<a class="headerlink" href="#bash-inout" title="Permanent link">&para;</a></h3>
+<p><code>Bash</code> を実行すると、画面に <strong>2つ</strong> が表示されます。区別が分かると、ぐっと読みやすくなります。</p>
+<ul>
+<li><strong>入力（IN）</strong> … Claudeが実行する <strong>コマンド（命令文）</strong>。「PCへのお願い」</li>
+<li><strong>出力（OUT）</strong> … それを実行した <strong>結果</strong>。「PCからの返事」</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>例</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入力（IN）</td>
+<td><code>git status</code></td>
+<td>「いま何が変わったか教えて」という命令</td>
+</tr>
+<tr>
+<td>出力（OUT）</td>
+<td><code>modified: メモ.txt</code> など</td>
+<td>「メモ.txt が変わっています」という返事</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    A[入力 IN&lt;br/&gt;コマンド] --&gt;|PCにお願い| B[(PC)]
+    B --&gt;|返事| C[出力 OUT&lt;br/&gt;実行結果]</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">出力（OUT）はPCからの返事</p>
+<p>出力は英語や記号が多くて難しく見えますが、<strong>Claudeがそれを読んで次の判断</strong> をします。中身を全部読めなくても大丈夫です。
+赤い文字やエラーが出ても、それは直し方のヒント。困ったら <a href="../ai-errors/">エラーとの付き合い方</a> を見てください。</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">「ターミナル」「シェル」「Bash」って？</p>
 <ul>
