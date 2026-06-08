@@ -703,6 +703,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        「同じブランチで複数タブ」のときは？
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -720,7 +731,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         使い方のコツ
@@ -736,7 +747,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
         確認と片付け
@@ -747,7 +758,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
         やり直したいとき：リバートとリベース
@@ -786,7 +797,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         この章のまとめ
@@ -1045,6 +1056,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        「同じブランチで複数タブ」のときは？
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1062,7 +1084,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
         使い方のコツ
@@ -1078,7 +1100,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
         確認と片付け
@@ -1089,7 +1111,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
         やり直したいとき：リバートとリベース
@@ -1128,7 +1150,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         この章のまとめ
@@ -1335,6 +1357,37 @@ git<span class="w"> </span>worktree<span class="w"> </span>add<span class="w"> <
 </tr>
 </tbody>
 </table>
+<h4 id="_8">「同じブランチで複数タブ」のときは？<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>同じブランチのまま複数タブで作業しても、<strong>ブランチを切り替えないので「作業が別ブランチに乗る」事故は起きません</strong>。
+ただし、<strong>作業フォルダ（ファイル）は1つを共有</strong> していて、各タブは <strong>お互いの変更を見られない</strong> ので、<strong>同じファイルを同時に触ると上書き・混在</strong> が起きえます。</p>
+<table>
+<thead>
+<tr>
+<th>状況</th>
+<th>どうなる</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>別々のファイル／場所を担当</td>
+<td>✅ そのまま並行できる</td>
+</tr>
+<tr>
+<td>同じファイル／近い場所を同時に編集</td>
+<td>⚠️ 一方の変更が消える・混ざる</td>
+</tr>
+</tbody>
+</table>
+<p><strong>まとめ（3パターン）</strong></p>
+<ul>
+<li><strong>同じブランチ × 別々の場所</strong> → そのまま並行でOK</li>
+<li><strong>同じブランチ × 同じ場所</strong> → 上書きに注意（担当を分ける／ワークツリーへ）</li>
+<li><strong>別ブランチ</strong> → ワークツリーで分ける（切り替え事故を防ぐ）</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">混ざりにくくするコツ</p>
+<p>タブごとに <strong>「触る場所（ファイル・フォルダ）」を決めておく</strong>、そして <strong>こまめにコミットする</strong> と、混ざりにくく、後から整理しやすくなります。</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">なぜ“競合しそう”だと分けるの？</p>
 <p>別々のClaudeの会話（タブ）は、<strong>お互いの作業内容を見ることができません</strong>。
@@ -1372,7 +1425,7 @@ git<span class="w"> </span>worktree<span class="w"> </span>add<span class="w"> <
 </div>
 </div>
 </div>
-<h3 id="_8">使い方のコツ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_9">使い方のコツ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>1タスク＝1つの会話</strong> にする。フォルダ（ワークツリー）ごとに会話を分けると、内容が混ざりません</li>
 <li>
@@ -1421,7 +1474,7 @@ git<span class="w"> </span>worktree<span class="w"> </span>add<span class="w"> <
 <li>ワークツリーでの並行作業： <a href="https://code.claude.com/docs/en/worktrees">https://code.claude.com/docs/en/worktrees</a></li>
 </ul>
 </details>
-<h2 id="_9">確認と片付け<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">確認と片付け<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>作業が終わったら、使わないワークツリーは片付けます。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.5 15.5c0 .37-.1.7-.28 1-.34-.59-.98-1-1.72-1s-1.38.41-1.72 1c-.17-.3-.28-.63-.28-1 0-1.1.9-2 2-2s2 .9 2 2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2zm-5.5-2.5c-1.1 0-2 .9-2 2 0 .37.11.7.28 1 .34-.59.98-1 1.72-1s1.38.41 1.72 1c.18-.3.28-.63.28-1a2 2 0 0 0-2-2"/></svg></span> Claudeに頼む</label><label for="__tabbed_4_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg></span> CLIで操作</label></div>
 <div class="tabbed-content">
@@ -1445,7 +1498,7 @@ git<span class="w"> </span>worktree<span class="w"> </span>remove<span class="w"
 <p>削除するフォルダに <strong>保存していない変更（未コミット）</strong> が残っていないか、先に確認しましょう。
 不安なときは「このワークツリー、消して大丈夫？」とClaudeに聞くと安心です。</p>
 </div>
-<h2 id="_10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 7a6.5 6.5 0 0 1 6.5 6.5 6.5 6.5 0 0 1-6.5 6.5H10v-2h3.5c2.5 0 4.5-2 4.5-4.5S16 9 13.5 9H7.83l3.08 3.09L9.5 13.5 4 8l5.5-5.5 1.42 1.41L7.83 7zM6 18h2v2H6z"/></svg></span> やり直したいとき：リバートとリベース<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 7a6.5 6.5 0 0 1 6.5 6.5 6.5 6.5 0 0 1-6.5 6.5H10v-2h3.5c2.5 0 4.5-2 4.5-4.5S16 9 13.5 9H7.83l3.08 3.09L9.5 13.5 4 8l5.5-5.5 1.42 1.41L7.83 7zM6 18h2v2H6z"/></svg></span> やり直したいとき：リバートとリベース<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <p>「あの変更を取り消したい」「履歴を整理したい」ときの代表が、<strong>リバート</strong> と <strong>リベース</strong> です。性質が違うので使い分けます。</p>
 <table>
 <thead>
@@ -1545,7 +1598,7 @@ git<span class="w"> </span>rebase<span class="w"> </span>main<span class="w">   
 <p>「取り消したい」だけなら、まずは <strong>安全なリバート</strong>。
 リベースは効果も影響も大きいので、不安なときはClaudeや詳しい人に相談しましょう。</p>
 </div>
-<h2 id="_11">この章のまとめ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h2 id="_12">この章のまとめ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <figure>
   <img alt="複数プロジェクトを整理するイメージ" src="../images/illustrations/organizing-projects.svg" width="320" />
 <br />
