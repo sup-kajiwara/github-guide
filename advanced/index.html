@@ -684,19 +684,19 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ 落とし穴：作業スペースは“1つ”を共有している
+        ⚠️ 落とし穴：1つの作業スペースを共有している
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚠️ 落とし穴：作業スペースは“1つ”を共有している">
+    <nav class="md-nav" aria-label="⚠️ 落とし穴：1つの作業スペースを共有している">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        分ける／分けないの目安
+        分ける？ 分けない？ の目安
       
     </span>
   </a>
@@ -1026,19 +1026,19 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ 落とし穴：作業スペースは“1つ”を共有している
+        ⚠️ 落とし穴：1つの作業スペースを共有している
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚠️ 落とし穴：作業スペースは“1つ”を共有している">
+    <nav class="md-nav" aria-label="⚠️ 落とし穴：1つの作業スペースを共有している">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        分ける／分けないの目安
+        分ける？ 分けない？ の目安
       
     </span>
   </a>
@@ -1293,40 +1293,59 @@ git<span class="w"> </span>worktree<span class="w"> </span>add<span class="w"> <
     A[ワークツリーで&lt;br/&gt;フォルダを分ける] --&gt; B[タブ/ウィンドウを&lt;br/&gt;分けてClaudeを開く]
     B --&gt; C1[🪟 タブ1&lt;br/&gt;機能Aを担当]
     B --&gt; C2[🪟 タブ2&lt;br/&gt;急ぎの修正Bを担当]</code></pre>
-<h3 id="1">⚠️ 落とし穴：作業スペースは“1つ”を共有している<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>タブを分けても、<strong>手元の作業フォルダ（ワークツリー）が1つのまま</strong> だと、事故が起きます。</p>
-<p>ワークツリーを使わずに、こうするとどうなるでしょう——</p>
-<ul>
-<li><strong>Aのタブ</strong>で <code>main</code> を修正中</li>
-<li><strong>Bのタブ</strong>で <code>feat-1</code> ブランチを切って作業開始</li>
-<li>→ 作業フォルダ全体が <code>main</code> → <code>feat-1</code> に <strong>切り替わる</strong></li>
-<li>→ <strong>Aで編集していた内容まで <code>feat-1</code> に乗ってしまう</strong> 😱</li>
-</ul>
-<div class="highlight"><pre><span></span><code>1つの作業フォルダを A・B のタブが共有
- ├ Aタブ: main を編集中
- └ Bタブ: feat-1 に切り替え → フォルダ全体が feat-1 に
- 結果：Aの作業も feat-1 に乗ってしまう ⚠️
+<h3 id="1">⚠️ 落とし穴：1つの作業スペースを共有している<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>タブを分けても、<strong>作業フォルダ（ワークツリー）が1つのまま</strong> だと、思わぬ事故が起きます。たとえば、こんな場面です。</p>
+<ol>
+<li><strong>Aのタブ</strong> で、<code>main</code> ブランチのファイルを直していた</li>
+<li><strong>Bのタブ</strong> で、新しく <code>feat-1</code> ブランチに切り替えて作業を始めた</li>
+<li>すると、<strong>フォルダ全体が <code>feat-1</code> に切り替わった</strong></li>
+<li>気づけば、<strong>Aで直していた内容まで <code>feat-1</code> に入ってしまった</strong> 😱</li>
+</ol>
+<p>なぜ、こうなるのでしょう。前の「ブランチはローカルでどうなっている？」で見たとおり、<strong>作業フォルダは1つだけ</strong> で、ブランチを切り替えると <strong>その1つのフォルダの中身がまるごと入れ替わる</strong> からです。AのタブもBのタブも、結局は <strong>同じ1つのフォルダ</strong> を見ているのです。</p>
+<div class="highlight"><pre><span></span><code>1つの作業フォルダを、A・Bのタブが共有している
+    Aタブ：main を編集中
+    Bタブ：feat-1 に切り替え
+          ↓
+    フォルダ全体が feat-1 に変わり、
+    Aの作業まで feat-1 に乗ってしまう ⚠️
 </code></pre></div>
-<p>（前の「ブランチはローカルでどうなっている？」で見た <strong>“作業フォルダは1つ”</strong> が、ここで効いてきます。）</p>
-<p><strong>だから：タブごとに別ブランチで作業するなら、ワークツリーで作業フォルダも分けます。</strong></p>
-<h4 id="_7">分ける／分けないの目安<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<pre class="mermaid"><code>flowchart TD
-    Q{タブごとに別ブランチで作業する？} --&gt;|はい| W[ワークツリーで分ける&lt;br/&gt;各タブ＝別フォルダ＝別ブランチ]
-    Q --&gt;|いいえ：同じブランチで&lt;br/&gt;関係ない箇所だけ触る| O[1つの作業スペースでOK]</code></pre>
-<ul>
-<li>別ブランチで並行、または <strong>修正箇所が競合しそう</strong> → <strong>ワークツリーで分ける</strong></li>
-<li>同じブランチで、<strong>まったく関係ない箇所</strong> だけ触る → 1つの作業スペースでOK</li>
-</ul>
+<p><strong>対策はシンプルです。タブごとに別のブランチで作業するなら、ワークツリーでフォルダごと分けましょう。</strong>
+そうすれば、Aのフォルダは <code>main</code>、Bのフォルダは <code>feat-1</code> と、混ざらずに並行できます。</p>
+<h4 id="_7">分ける？ 分けない？ の目安<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>すべてをワークツリーで分ける必要はありません。次を目安にしてください。</p>
+<table>
+<thead>
+<tr>
+<th>こんなとき</th>
+<th>おすすめ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>タブごとに <strong>別のブランチ</strong> で作業する</td>
+<td><strong>ワークツリーで分ける</strong></td>
+</tr>
+<tr>
+<td>直す場所が <strong>ぶつかりそう（競合しそう）</strong></td>
+<td><strong>ワークツリーで分ける</strong></td>
+</tr>
+<tr>
+<td>同じブランチで、<strong>まったく関係ない場所</strong> だけ触る</td>
+<td>分けず <strong>1つの作業スペースでOK</strong></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
-<p class="admonition-title">Bのタブは、Aのタブの作業を知りません</p>
-<p>別々のClaude会話は、互いの作業内容を参照できません。
-競合しそうなときは、<strong>ブランチを切ってワークツリーで分ける</strong> のが安全です。</p>
+<p class="admonition-title">なぜ“競合しそう”だと分けるの？</p>
+<p>別々のClaudeの会話（タブ）は、<strong>お互いの作業内容を見ることができません</strong>。
+そのため、近い場所を同時に触ると食い違いが起きやすくなります。<strong>ぶつかりそうなら、最初から分けておく</strong> のが安全です。</p>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">補足：ワークツリーとブランチの関係</p>
+<p class="admonition-title">ワークツリーとブランチの関係（よくある疑問）</p>
 <ul>
-<li>ワークツリーを作る ≒ <strong>別ブランチも用意</strong> する（ただし <strong>既存のブランチでワークツリーを作る</strong> こともできます）</li>
-<li><strong>同じブランチに複数のワークツリーは作れません</strong>（例：<code>main</code> にワークツリー A と B、は不可）</li>
+<li>「ワークツリーを作る」は、たいてい <strong>新しいブランチも一緒に用意する</strong> ことを指します。</li>
+<li>ただし、<strong>すでにあるブランチを使って</strong> ワークツリーを作ることもできます（例：<code>feat-1</code> がもうあれば、それで作れます）。</li>
+<li>一方、<strong>同じブランチに2つのワークツリーは作れません</strong>（例：<code>main</code> でフォルダAとフォルダB、はできません）。</li>
 </ul>
 </div>
 <h3 id="2">開き方（2通り）<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
