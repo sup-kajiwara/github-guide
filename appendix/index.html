@@ -747,6 +747,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        許可する前に見たい「気をつけたいコマンド」
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -765,7 +776,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         書いてみる例
@@ -859,6 +870,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        許可する前に見たい「気をつけたいコマンド」
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -877,7 +899,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         書いてみる例
@@ -1064,6 +1086,90 @@
 <p>名前の意味が分からなくても、<strong>「何のために」やろうとしているか</strong> をClaudeに聞けば説明してくれます。
 迷ったら「いまの操作を、やさしく説明して」と頼みましょう。</p>
 </div>
+<h3 id="_2">許可する前に見たい「気をつけたいコマンド」<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><code>Bash</code> の許可を求められたら、次の <strong>“危険な言葉”</strong> が含まれていないか確認しましょう。
+（<code>ls</code>／<code>Read</code>／<code>git status</code> のような <strong>「見るだけ」のコマンドは安全</strong> です。）</p>
+<p><strong>① 消す・元に戻しにくい（最重要）</strong></p>
+<table>
+<thead>
+<tr>
+<th>見かけたら注意</th>
+<th>何をする</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rm</code> / <code>rm -rf</code></td>
+<td>ファイル・<strong>フォルダごと削除</strong>（戻せないことが多い）</td>
+</tr>
+<tr>
+<td><code>git reset --hard</code></td>
+<td>記録していない変更を <strong>捨てる</strong></td>
+</tr>
+<tr>
+<td><code>git clean -fd</code></td>
+<td>追跡していないファイルを <strong>削除</strong></td>
+</tr>
+<tr>
+<td><code>git push --force</code> / <code>-f</code></td>
+<td>GitHubの <strong>履歴を上書き</strong>（他人の作業を壊しうる）</td>
+</tr>
+<tr>
+<td><code>&gt;</code>（例：<code>… &gt; file</code>）</td>
+<td>ファイルを <strong>丸ごと上書き</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>② PC全体・権限に効く</strong></p>
+<table>
+<thead>
+<tr>
+<th>見かけたら注意</th>
+<th>何をする</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo</code></td>
+<td><strong>管理者権限</strong> で実行（PC全体に影響しうる）</td>
+</tr>
+<tr>
+<td><code>chmod</code> / <code>chown</code></td>
+<td>ファイルの <strong>権限を変更</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>③ 外から取ってくる・外へ送る</strong></p>
+<table>
+<thead>
+<tr>
+<th>見かけたら注意</th>
+<th>何をする</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>curl … \| bash</code> / <code>\| sh</code></td>
+<td>ネットから取得して <strong>そのまま実行</strong>（中身が不明なら危険）</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>GitHubへ <strong>送信</strong>（特にPublic化に注意）</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">確認のコツ</p>
+<ul>
+<li><strong>動詞を見る</strong>：<code>rm</code>（削除）・<code>force</code>（強制）・<code>sudo</code>（管理者）が見えたら要確認</li>
+<li><strong>どこに効くか</strong>：練習用フォルダの中だけか、PC全体か</li>
+<li><strong>迷ったら断る／聞く</strong>：「このコマンドは何をする？ 危険はない？」とClaudeに聞けばOK。<strong>許可しなければ実行されません</strong></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">大前提：練習は安全な場所で</p>
+<p>練習は <strong>専用フォルダ／Privateリポジトリ</strong> で行えば、もし消しても被害は最小です。</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">表示は変わることがあります</p>
 <p>道具の名前や種類は、バージョンによって増えたり変わったりします。ここに挙げたのは一例です。</p>
@@ -1116,7 +1222,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_2">書いてみる例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_3">書いてみる例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="gh"># わたしのプロジェクト</span>
 
 これは <span class="gs">**練習用**</span> のリポジトリです。
