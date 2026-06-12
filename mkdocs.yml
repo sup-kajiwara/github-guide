@@ -51,6 +51,7 @@ nav:
   - みんなで使う（プルリク・マージ）: collaboration.md
   - 練習：通しでやってみる: practice.md
   - AIで作ってみる（ハンズオン）: ai-build.md
+  - デザインを言葉で伝える: design-vocab.md
   - エラーとの付き合い方: ai-errors.md
   - もっと使う（上級編）: advanced.md
   - 安全に使う: security.md
