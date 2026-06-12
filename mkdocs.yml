@@ -40,24 +40,30 @@ not_in_nav: |
   /images/
 
 # ===== サイドメニューの構成（章立て）=====
+# グループは折りたたみ式。いま見ている章のグループだけ自動で開きます。
 nav:
   - はじめに: index.md
   - 用語集（まずはここから）: glossary.md
-  - アカウント作成と初期設定: account-setup.md
-  - PCの準備（VSCode・Git・Claude）: setup-pc.md
   - AIで開発するとは: ai-intro.md
-  - 最初の一歩（リポジトリを作る）: first-steps.md
-  - 変更を記録する（コミット）: commit-push.md
-  - みんなで使う（プルリク・マージ）: collaboration.md
-  - 練習：通しでやってみる: practice.md
-  - AIで作ってみる（ハンズオン）: ai-build.md
-  - デザインを言葉で伝える: design-vocab.md
-  - エラーとの付き合い方: ai-errors.md
-  - もっと使う（上級編）: advanced.md
-  - 安全に使う: security.md
-  - AIと安全に付き合う: ai-safety.md
-  - 困ったときのQ&A: troubleshooting.md
-  - 付録：Claudeの頼み方とMarkdown: appendix.md
+  - 準備する:
+      - アカウント作成と初期設定: account-setup.md
+      - PCの準備（VSCode・Git・Claude）: setup-pc.md
+  - GitHubの基本:
+      - 最初の一歩（リポジトリを作る）: first-steps.md
+      - 変更を記録する（コミット）: commit-push.md
+      - みんなで使う（プルリク・マージ）: collaboration.md
+  - つくってみる:
+      - 練習：通しでやってみる: practice.md
+      - AIで作ってみる（ハンズオン）: ai-build.md
+      - デザインを言葉で伝える: design-vocab.md
+      - エラーとの付き合い方: ai-errors.md
+  - 安全に使う:
+      - 情報を守る（GitHub）: security.md
+      - AIと安全に付き合う: ai-safety.md
+  - もっと深く:
+      - もっと使う（上級編）: advanced.md
+      - 困ったときのQ&A: troubleshooting.md
+      - 付録：Claudeの頼み方とMarkdown: appendix.md
 
 # ===== 検索機能 =====
 plugins:
