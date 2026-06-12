@@ -30,7 +30,7 @@
 
 <style>
 /* === デザイン用語ミニ見本（このページ専用・dv- 接頭辞でスコープ）=== */
-.dv-grid{display:flex;flex-wrap:wrap;gap:22px;margin:1.2em 0;}
+.dv-grid{display:flex;flex-wrap:wrap;gap:22px;margin:1.2em 0;justify-content:center;}
 .dv-item{width:240px;margin:0;}
 .dv-item figcaption{font-size:.78rem;line-height:1.5;margin-top:.5em;color:var(--md-default-fg-color--light);}
 .dv-item figcaption b{color:var(--md-default-fg-color);}
