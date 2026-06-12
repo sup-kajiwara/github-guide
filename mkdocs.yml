@@ -55,8 +55,8 @@ nav:
   - つくってみる:
       - 練習：通しでやってみる: practice.md
       - AIで作ってみる（ハンズオン）: ai-build.md
-      - デザインを言葉で伝える: design-vocab.md
-      - エラーとの付き合い方: ai-errors.md
+  - デザインを言葉で伝える: design-vocab.md
+  - エラーとの付き合い方: ai-errors.md
   - 安全に使う:
       - 情報を守る（GitHub）: security.md
       - AIと安全に付き合う: ai-safety.md
