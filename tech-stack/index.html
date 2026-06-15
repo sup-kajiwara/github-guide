@@ -963,6 +963,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        そのままClaudeに貼れる定型文
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1311,6 +1322,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        そのままClaudeに貼れる定型文
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1632,6 +1654,44 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="claude"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg></span> そのままClaudeに貼れる定型文<a class="headerlink" href="#claude" title="Permanent link">&para;</a></h2>
+<p>右上の <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg></span> ボタンでコピーして、Claudeへの最初のメッセージに貼ってください。
+<strong>「何を作りたいか」を1行目に書き足す</strong> と、社内標準のスタックに沿って作ってもらえます。</p>
+<div class="highlight"><pre><span></span><code>これから新規Webアプリを作ります。次の技術スタックで進めてください。
+
+【作りたいもの】
+（ここに作りたいものを書く。例：問い合わせフォーム付きの社内向けダッシュボード）
+
+【技術スタック（社内標準）】
+- パッケージマネージャー: pnpm
+- フルスタックフレームワーク: TanStack Start（型安全ルーティング / Viteベース）
+- ビルドツール: Vite
+- UIコンポーネント: ark-ui
+- CSS: Tailwind CSS + Tailwind Variants
+- バリデーション: zod
+- 認証: better-auth（二要素認証を使う）
+- ORM: drizzle-orm
+- データベース: PostgreSQL
+- テスト: Vitest
+- リバースプロキシ: nginx
+- メール: docker-mailserver
+
+【お願い】
+- まず全体構成（フォルダ/ファイルの方針）を提案してから、小さく動くものを作ってください。
+- 認証情報（パスワード・APIキー等）はコードに直書きせず、環境変数の使い方も教えてください。
+- 進め方や不明点があれば、作り始める前に質問してください。
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">短く頼みたいとき</p>
+<p>1行で済ませたい場合はこれだけでもOKです。</p>
+<div class="highlight"><pre><span></span><code>pnpm + TanStack Start + ark-ui + Tailwind CSS + drizzle-orm + PostgreSQL + zod + better-auth + Vite + Vitest で作って。
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">貼る前の確認</p>
+<p>定型文に <strong>実在の顧客名・案件名や認証情報</strong> を書き込まないでください（→ <a href="../ai-safety/">AIと安全に付き合う</a>）。</p>
+</div>
 <hr />
 <h2 id="_3">フロントエンド・アプリ基盤<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="tanstack-start"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-10 9H9v1.5c0 1.1-.9 2-2 2 1.1 0 2 .9 2 2V18h2v2H9c-1.1 0-2-.9-2-2v-.5c0-1.1-.9-2-2-2v-2c1.1 0 2-.9 2-2V11c0-1.1.9-2 2-2h2zm8 4.5c-1.1 0-2 .9-2 2v.5c0 1.1-.9 2-2 2h-2v-2h2v-1.5c0-1.1.9-2 2-2-1.1 0-2-.9-2-2V11h-2V9h2c1.1 0 2 .9 2 2v.5c0 1.1.9 2 2 2zM21 7H3V4h18z"/></svg></span> フルスタックフレームワーク：TanStack Start<a class="headerlink" href="#tanstack-start" title="Permanent link">&para;</a></h3>
