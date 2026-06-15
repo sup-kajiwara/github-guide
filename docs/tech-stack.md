@@ -38,6 +38,49 @@
 
 ---
 
+## :material-content-copy: そのままClaudeに貼れる定型文
+
+右上の :material-content-copy: ボタンでコピーして、Claudeへの最初のメッセージに貼ってください。
+**「何を作りたいか」を1行目に書き足す** と、社内標準のスタックに沿って作ってもらえます。
+
+```text
+これから新規Webアプリを作ります。次の技術スタックで進めてください。
+
+【作りたいもの】
+（ここに作りたいものを書く。例：問い合わせフォーム付きの社内向けダッシュボード）
+
+【技術スタック（社内標準）】
+- パッケージマネージャー: pnpm
+- フルスタックフレームワーク: TanStack Start（型安全ルーティング / Viteベース）
+- ビルドツール: Vite
+- UIコンポーネント: ark-ui
+- CSS: Tailwind CSS + Tailwind Variants
+- バリデーション: zod
+- 認証: better-auth（二要素認証を使う）
+- ORM: drizzle-orm
+- データベース: PostgreSQL
+- テスト: Vitest
+- リバースプロキシ: nginx
+- メール: docker-mailserver
+
+【お願い】
+- まず全体構成（フォルダ/ファイルの方針）を提案してから、小さく動くものを作ってください。
+- 認証情報（パスワード・APIキー等）はコードに直書きせず、環境変数の使い方も教えてください。
+- 進め方や不明点があれば、作り始める前に質問してください。
+```
+
+!!! tip "短く頼みたいとき"
+    1行で済ませたい場合はこれだけでもOKです。
+
+    ```text
+    pnpm + TanStack Start + ark-ui + Tailwind CSS + drizzle-orm + PostgreSQL + zod + better-auth + Vite + Vitest で作って。
+    ```
+
+!!! warning "貼る前の確認"
+    定型文に **実在の顧客名・案件名や認証情報** を書き込まないでください（→ [AIと安全に付き合う](ai-safety.md)）。
+
+---
+
 ## フロントエンド・アプリ基盤
 
 ### :material-application-braces: フルスタックフレームワーク：TanStack Start
