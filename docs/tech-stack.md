@@ -21,20 +21,24 @@
 
 ## 全体の早見表
 
-| カテゴリ | 採用技術 | ひとことで言うと |
-|---|---|---|
-| パッケージマネージャー | **pnpm** | 速い・容量を節約・安全 |
-| フルスタックフレームワーク | **TanStack Start** | 型安全＋高速＋デプロイ自由 |
-| 認証 | **better-auth** | 二要素認証まで対応 |
-| ORM（DB操作） | **drizzle-orm** | SQLの知識をそのまま活かせる |
-| UIコンポーネント | **ark-ui** | 見た目を自由に作れる（色味カスタムに強い） |
-| CSS | **Tailwind CSS** ＋ **Tailwind Variants** | クラスで素早くスタイリング |
-| バリデーション | **zod** | 入力チェックを型と一緒に |
-| ビルドツール | **Vite** | 開発も本番も高速 |
-| テスト | **Vitest** | Viteと同じ仕組みで軽快 |
-| データベース | **PostgreSQL** | 定番で堅牢なDB |
-| リバースプロキシ | **nginx** | 入口の振り分け役 |
-| メール | **docker-mailserver** | 自前のメール基盤をコンテナで |
+| カテゴリ | 採用技術 | 読み方 | ひとことで言うと |
+|---|---|---|---|
+| パッケージマネージャー | **pnpm** | ピーエヌピーエム | 速い・容量を節約・安全 |
+| フルスタックフレームワーク | **TanStack Start** | タンスタック・スタート | 型安全＋高速＋デプロイ自由 |
+| 認証 | **better-auth** | ベター・オース | 二要素認証まで対応 |
+| ORM（DB操作） | **drizzle-orm** | ドリズル・オーアールエム | SQLの知識をそのまま活かせる |
+| UIコンポーネント | **ark-ui** | アーク・ユーアイ | 見た目を自由に作れる（色味カスタムに強い） |
+| CSS | **Tailwind CSS** ＋ **Tailwind Variants** | テイルウィンド・シーエスエス／バリアンツ | クラスで素早くスタイリング |
+| バリデーション | **zod** | ゾッド | 入力チェックを型と一緒に |
+| ビルドツール | **Vite** | ヴィート | 開発も本番も高速 |
+| テスト | **Vitest** | ヴィテスト | Viteと同じ仕組みで軽快 |
+| データベース | **PostgreSQL** | ポストグレスキューエル（略：ポスグレ） | 定番で堅牢なDB |
+| リバースプロキシ | **nginx** | エンジンエックス | 入口の振り分け役 |
+| メール | **docker-mailserver** | ドッカー・メールサーバー | 自前のメール基盤をコンテナで |
+
+!!! note "読み方について"
+    技術名の読み方は **人や現場によって揺れがあります**（例：zod は「ゾッド」「ゾド」、Vite は「ヴィート」「バイト」など）。
+    ここでは社内で通じやすい読みを目安として記載しています。
 
 ---
 
@@ -83,7 +87,7 @@
 
 ## フロントエンド・アプリ基盤
 
-### :material-application-braces: フルスタックフレームワーク：TanStack Start
+### :material-application-braces: フルスタックフレームワーク：TanStack Start（タンスタック・スタート）
 
 **結論：新規Webアプリの土台は TanStack Start を標準にします。**
 
@@ -93,14 +97,14 @@
 - :material-rocket-launch: **Viteベースで高速な開発体験** — 保存するとすぐ画面に反映される
 - :material-cloud-cog: **デプロイ先の柔軟性** — 特定のサービスに縛られず、置き場所を選べる
 
-### :material-vuetify: ビルドツール：Vite
+### :material-vuetify: ビルドツール：Vite（ヴィート）
 
 **結論：ビルド・開発サーバーは Vite を使います。**
 
 - 開発中の表示が速く、待ち時間が少ない
 - TanStack Start も Vitest も Vite を土台にしており、**道具がそろう** のが大きな利点
 
-### :material-palette-swatch: UIコンポーネント：ark-ui
+### :material-palette-swatch: UIコンポーネント：ark-ui（アーク・ユーアイ）
 
 **結論：UIの部品は ark-ui を標準とします。**
 
@@ -115,7 +119,7 @@
 
     現在は v4 対応が進んでいるため、**標準色ベースの案件では再評価の余地あり**。ただし「色味のカスタムが多い案件 → ark-ui」という現状の使い分けは引き続き有効です。
 
-### :material-language-css3: CSS：Tailwind CSS ＋ Tailwind Variants
+### :material-language-css3: CSS：Tailwind CSS ＋ Tailwind Variants（テイルウィンド・シーエスエス／バリアンツ）
 
 **結論：スタイリングは Tailwind CSS を基本に、出し分けは Tailwind Variants で整理します。**
 
@@ -126,7 +130,7 @@
 
 ## データ・バックエンド
 
-### :material-database-cog: ORM：drizzle-orm
+### :material-database-cog: ORM：drizzle-orm（ドリズル・オーアールエム）
 
 **結論：データベース操作は drizzle-orm を標準にします。**
 
@@ -135,14 +139,14 @@
 - :material-database-search: **SQLの知識がそのまま活かせる** — SQLに近い書き心地で、学習コストが低い
 - :material-speedometer: **SQLのパフォーマンスを良くできる** — 発行されるクエリが見えやすく、無駄な処理を抑えやすい
 
-### :material-elephant: データベース：PostgreSQL
+### :material-elephant: データベース：PostgreSQL（ポストグレスキューエル）
 
 **結論：DBは PostgreSQL を標準とします。**
 
 - 実績が豊富で堅牢、機能も充実した定番のリレーショナルDB
 - drizzle-orm との組み合わせで安心して使える
 
-### :material-shield-key: 認証：better-auth
+### :material-shield-key: 認証：better-auth（ベター・オース）
 
 **結論：ログイン・認証まわりは better-auth を使います。**
 
@@ -151,7 +155,7 @@
 !!! warning "認証情報の扱いに注意"
     パスワード・APIキー・トークンなどの認証情報は、**コードに直接書かない／AIに渡さない** のが基本です（→ [AIと安全に付き合う](ai-safety.md)）。
 
-### :material-check-decagram: バリデーション：zod
+### :material-check-decagram: バリデーション：zod（ゾッド）
 
 **結論：入力チェック（バリデーション）は zod で行います。**
 
@@ -162,7 +166,7 @@
 
 ## 開発まわり
 
-### :material-package-variant-closed: パッケージマネージャー：pnpm
+### :material-package-variant-closed: パッケージマネージャー：pnpm（ピーエヌピーエム）
 
 **結論：ライブラリの管理は pnpm を標準にします。**
 
@@ -175,7 +179,7 @@
     ライブラリ（部品）に悪意のあるコードを紛れ込ませて攻撃する手口のこと。
     pnpm は依存関係を厳密に扱うため、こうしたリスクを減らすのに役立ちます。
 
-### :material-test-tube: テスト：Vitest
+### :material-test-tube: テスト：Vitest（ヴィテスト）
 
 **結論：自動テストは Vitest で書きます。**
 
@@ -186,14 +190,14 @@
 
 ## インフラ・運用
 
-### :material-arrow-decision: リバースプロキシ：nginx
+### :material-arrow-decision: リバースプロキシ：nginx（エンジンエックス）
 
 **結論：サーバーの入口（振り分け役）は nginx を使います。**
 
 - 外からのアクセスを受け取り、適切なアプリへ **振り分ける**
 - HTTPS化や静的ファイルの配信など、入口まわりの役割を担う
 
-### :material-email-fast: メール：docker-mailserver
+### :material-email-fast: メール：docker-mailserver（ドッカー・メールサーバー）
 
 **結論：メール基盤は docker-mailserver で構築します。**
 
