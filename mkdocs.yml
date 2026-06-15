@@ -61,6 +61,7 @@ nav:
       - 情報を守る（GitHub）: security.md
       - AIと安全に付き合う: ai-safety.md
   - もっと深く:
+      - 推奨技術スタック: tech-stack.md
       - もっと使う（上級編）: advanced.md
       - 困ったときのQ&A: troubleshooting.md
       - 付録：Claudeの頼み方とMarkdown: appendix.md
