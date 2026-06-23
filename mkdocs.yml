@@ -56,6 +56,7 @@ nav:
       - 練習：通しでやってみる: practice.md
       - AIで作ってみる（ハンズオン）: ai-build.md
   - デザインを言葉で伝える: design-vocab.md
+  - UI/UX用語集（パーツの名前で直す）: ui-vocab.md
   - エラーとの付き合い方: ai-errors.md
   - 安全に使う:
       - 情報を守る（GitHub）: security.md
