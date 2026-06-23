@@ -1,0 +1,2009 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="非エンジニア向け・GitHubをやさしく学ぶ入門ガイド">
+      
+      
+        <meta name="author" content="はじめてのGitHub 入門ガイド">
+      
+      
+        <link rel="canonical" href="https://sup-kajiwara.github.io/github-guide/ui-vocab/">
+      
+      
+        <link rel="prev" href="../design-vocab/">
+      
+      
+        <link rel="next" href="../ai-errors/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>UI/UX用語集（パーツの名前で直す） - はじめてのGitHub 入門ガイド</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uiux" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="はじめてのGitHub 入門ガイド" class="md-header__button md-logo" aria-label="はじめてのGitHub 入門ガイド" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            はじめてのGitHub 入門ガイド
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI/UX用語集（パーツの名前で直す）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ダークモードに切り替え"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモードに切り替え" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="ライトモードに切り替え"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモードに切り替え" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="はじめてのGitHub 入門ガイド" class="md-nav__button md-logo" aria-label="はじめてのGitHub 入門ガイド" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    はじめてのGitHub 入門ガイド
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    はじめに
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用語集（まずはここから）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIで開発するとは
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    準備する
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    準備する
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    アカウント作成と初期設定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-pc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCの準備（VSCode・Git・Claude）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHubの基本
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GitHubの基本
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最初の一歩（リポジトリを作る）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commit-push/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    変更を記録する（コミット）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    みんなで使う（プルリク・マージ）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    つくってみる
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    つくってみる
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    練習：通しでやってみる
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIで作ってみる（ハンズオン）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design-vocab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    デザインを言葉で伝える
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX用語集（パーツの名前で直す）
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX用語集（パーツの名前で直す）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        なぜ「パーツの名前」で言うの？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. パーツの呼び名
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. パーツの呼び名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        よく使う小さな部品
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        名前の早見表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. パーツの「状態」
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. パーツの「状態」">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ボタンの状態
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力欄・タブの状態
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 位置・領域の言い方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. そのまま使える修正依頼フレーズ集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        このページのまとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    エラーとの付き合い方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全に使う
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    安全に使う
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    情報を守る（GitHub）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-safety/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIと安全に付き合う
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    もっと深く
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    もっと深く
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-stack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    推奨技術スタック
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    もっと使う（上級編）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    困ったときのQ&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    付録：Claudeの頼み方とMarkdown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        なぜ「パーツの名前」で言うの？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. パーツの呼び名
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. パーツの呼び名">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        よく使う小さな部品
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        名前の早見表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. パーツの「状態」
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. パーツの「状態」">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ボタンの状態
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力欄・タブの状態
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 位置・領域の言い方
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. そのまま使える修正依頼フレーズ集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        このページのまとめ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="uiux">UI/UX用語集（パーツの名前で直す）<a class="headerlink" href="#uiux" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">このページのゴール</p>
+<p>画面を <strong>直してほしいとき</strong>、「あの青いやつ」ではなく <strong>「ヘッダー右上のログインボタン」</strong> のように、
+<strong>パーツの名前・状態・位置</strong> を正しく伝えられるようになること。一言が正確になるだけで、修正は一発で伝わります。</p>
+</div>
+<figure>
+  <img alt="パーツの名前で修正を伝えるイメージ" src="../images/illustrations/editable.svg" width="300" />
+<br />
+<figcaption>「どこを・どう直すか」を、ブレない言葉で</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">作るときの言葉は別ページにあります</p>
+<p>「モダンに」「余白を広めに」など <strong>雰囲気・デザインを伝える言葉</strong> は <a href="../design-vocab/">デザインを言葉で伝える</a> にまとめています。
+このページは <strong>できあがった画面を直す</strong> ときの言葉に特化しています。</p>
+</div>
+<hr />
+<h2 id="_1">なぜ「パーツの名前」で言うの？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>結論：場所と名前を指定すると、AIは「どこを直すか」で迷わなくなります。</strong></p>
+<p><strong>理由：</strong> AIは画面を“見て”いません。「あの青いボタン」では、画面にボタンがいくつもあると特定できず、見当違いの場所を直してしまいます。
+<strong>「パーツ名 ＋ 場所 ＋ 状態」</strong> の3点をそろえると、狙った1か所にピタッと届きます。</p>
+<p><strong>具体例：</strong></p>
+<div class="highlight"><pre><span></span><code>（×）ボタンの色がおかしいから直して
+（〇）ヘッダー右上の「ログイン」ボタンを、ホバーしたときだけ濃い青にして
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">3点セットで伝えると一発</p>
+<p><strong>① パーツ名</strong>（ボタン・モーダルなど）＋ <strong>② 場所</strong>（ヘッダー右上・カードの下など）＋ <strong>③ 状態</strong>（ホバー時・無効のとき）。
+この3つを意識するだけで、修正依頼の精度が大きく上がります。</p>
+</div>
+<style>
+/* === UI用語ミニ見本（このページ専用・uv- 接頭辞でスコープ）=== */
+.uv-grid{display:grid;grid-template-columns:repeat(auto-fill,240px);gap:22px;margin:1.4em 0;justify-content:center;}
+.uv-item{width:240px;margin:0;}
+.uv-item figcaption{font-size:.78rem;line-height:1.5;margin-top:.5em;color:var(--md-default-fg-color--light);}
+.uv-item figcaption b{color:var(--md-default-fg-color);}
+.uv-screen{width:240px;border-radius:11px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.14);border:1px solid rgba(0,0,0,.08);background:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+.uv-bar{height:22px;background:#f0f0f4;display:flex;align-items:center;gap:5px;padding:0 9px;}
+.uv-bar i{width:8px;height:8px;border-radius:50%;background:#d2d2da;display:inline-block;}
+.uv-page{padding:16px 16px;min-height:150px;display:flex;flex-direction:column;gap:10px;background:#fff;position:relative;}
+
+/* --- 状態（ボタン）--- */
+.uv-states{padding:16px;display:flex;flex-direction:column;gap:9px;align-items:flex-start;min-height:150px;justify-content:center;}
+.uv-sb{font-size:11px;padding:8px 16px;border-radius:7px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+.uv-sb.normal{background:#4f46e5;color:#fff;}
+.uv-sb.hover{background:#3d35c9;color:#fff;box-shadow:0 5px 12px rgba(79,70,229,.4);transform:translateY(-1px);}
+.uv-sb.disabled{background:#dcdce3;color:#9a9aa3;}
+.uv-sb.loading{background:#4f46e5;color:#fff;opacity:.85;}
+.uv-spin{width:11px;height:11px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;display:inline-block;animation:uvspin .8s linear infinite;}
+@keyframes uvspin{to{transform:rotate(360deg);}}
+.uv-tag{font-size:8px;color:#999;font-weight:500;}
+
+/* --- 状態（入力欄）--- */
+.uv-fields{padding:16px;display:flex;flex-direction:column;gap:11px;justify-content:center;min-height:150px;}
+.uv-fld{display:flex;flex-direction:column;gap:3px;}
+.uv-fld .l{font-size:9px;color:#888;}
+.uv-fld .i{height:24px;border-radius:5px;border:1px solid #ccc;background:#fff;}
+.uv-fld.focus .i{border-color:#4f46e5;box-shadow:0 0 0 3px rgba(79,70,229,.18);}
+.uv-fld.error .i{border-color:#e5484d;}
+.uv-fld.error .l{color:#e5484d;}
+.uv-fld .e{font-size:8px;color:#e5484d;}
+
+/* --- 状態（選択中タブ）--- */
+.uv-seltabs{display:flex;border-bottom:2px solid #e3e3ee;}
+.uv-seltabs span{font-size:10px;padding:9px 12px;color:#999;}
+.uv-seltabs span.on{color:#4f46e5;border-bottom:2px solid #4f46e5;margin-bottom:-2px;font-weight:700;}
+
+/* --- 位置・領域 --- */
+.uv-pos{padding:0;min-height:170px;}
+.uv-region{position:absolute;background:rgba(79,70,229,.12);border:1px dashed #4f46e5;display:flex;align-items:center;justify-content:center;font-size:8px;color:#4f46e5;font-weight:700;border-radius:4px;}
+.uv-dot{position:absolute;width:18px;height:18px;border-radius:50%;background:#4f46e5;color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.25);}
+.uv-frame{position:relative;width:100%;height:170px;background:#fafafe;}
+.uv-top{top:8px;left:8px;right:8px;height:24px;}
+.uv-bottom{bottom:8px;left:8px;right:8px;height:22px;}
+.uv-left{top:40px;bottom:36px;left:8px;width:54px;}
+.uv-center{top:70px;left:50%;transform:translateX(-50%);width:88px;height:34px;}
+
+/* --- パーツ見本（小物）--- */
+.uv-parts{padding:16px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;min-height:150px;}
+.uv-toast{background:#26262e;color:#fff;font-size:9px;padding:8px 12px;border-radius:7px;box-shadow:0 4px 12px rgba(0,0,0,.3);display:flex;align-items:center;gap:6px;}
+.uv-toast::before{content:"✓";color:#5be584;font-weight:700;}
+.uv-chip{font-size:9px;padding:3px 10px;border-radius:999px;background:#eef0f7;color:#444;border:1px solid #e0e2ee;display:inline-flex;align-items:center;gap:4px;}
+.uv-chip span{color:#999;}
+.uv-tip{position:relative;font-size:10px;background:#4f46e5;color:#fff;padding:5px 10px;border-radius:6px;}
+.uv-tip::after{content:"";position:absolute;bottom:-5px;left:18px;border:5px solid transparent;border-top-color:#4f46e5;border-bottom:0;}
+.uv-prog{width:120px;height:8px;border-radius:999px;background:#e3e3ee;overflow:hidden;}
+.uv-prog::after{content:"";display:block;width:62%;height:100%;background:#4f46e5;}
+.uv-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#5b54f0,#8b5cf6);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.uv-dropdown{width:110px;border:1px solid #ccc;border-radius:6px;overflow:hidden;font-size:10px;}
+.uv-dropdown .h{padding:6px 10px;display:flex;justify-content:space-between;color:#333;background:#fff;}
+.uv-dropdown .h span{color:#999;}
+.uv-dropdown .o{padding:5px 10px;background:#f5f6fc;color:#4f46e5;border-top:1px solid #eee;}
+</style>
+
+<hr />
+<h2 id="1">1. パーツの呼び名<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>「ここにこれを置いて」「これを直して」と頼むときに使う、<strong>部品そのものの名前</strong> です。
+名前で言えると一発で伝わります。</p>
+<h3 id="_2">よく使う小さな部品<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="uv-grid" markdown="0">
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-parts"><span class="uv-chip">下書き <span>×</span></span><span class="uv-chip">公開中 <span>×</span></span></div></div>
+  <figcaption><b>チップ／タグ</b><br>小さなラベル状の印。状態や絞り込みに使う。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-parts"><div class="uv-toast">保存しました</div></div></div>
+  <figcaption><b>トースト／スナックバー</b><br>画面の端に一瞬出て消える通知。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-parts"><div class="uv-tip">ここを押すと保存</div></div></div>
+  <figcaption><b>ツールチップ</b><br>乗せると出る小さな吹き出し説明。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-parts"><div class="uv-avatar">A</div><div class="uv-prog"></div></div></div>
+  <figcaption><b>アバター／プログレスバー</b><br>丸いユーザー画像／進み具合の帯。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-parts"><div class="uv-dropdown"><div class="h">東京都 <span>▾</span></div><div class="o">大阪府</div></div></div></div>
+  <figcaption><b>ドロップダウン／セレクト</b><br>押すと候補が下に開いて選ぶ。</figcaption>
+</figure>
+
+</div>
+
+<h3 id="_3">名前の早見表<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>パーツ名</th>
+<th>どんなもの</th>
+<th>こう頼む（例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ボタン</strong></td>
+<td>押す操作の部品</td>
+<td><code>「送信」ボタンを大きくして</code></td>
+</tr>
+<tr>
+<td><strong>リンク</strong></td>
+<td>押すと別ページへ飛ぶ文字</td>
+<td><code>下線付きのリンクにして</code></td>
+</tr>
+<tr>
+<td><strong>アイコン</strong></td>
+<td>絵文字状の小さな図記号</td>
+<td><code>ゴミ箱アイコンを赤くして</code></td>
+</tr>
+<tr>
+<td><strong>入力欄（テキストフィールド）</strong></td>
+<td>文字を打ち込む枠</td>
+<td><code>入力欄の幅を広げて</code></td>
+</tr>
+<tr>
+<td><strong>チェックボックス</strong></td>
+<td>オン/オフの四角い印</td>
+<td><code>「同意する」をチェックボックスに</code></td>
+</tr>
+<tr>
+<td><strong>ラジオボタン</strong></td>
+<td>1つだけ選ぶ丸い印</td>
+<td><code>性別はラジオボタンで</code></td>
+</tr>
+<tr>
+<td><strong>トグル（スイッチ）</strong></td>
+<td>オン/オフの切替スイッチ</td>
+<td><code>通知設定はトグルで</code></td>
+</tr>
+<tr>
+<td><strong>ドロップダウン／セレクト</strong></td>
+<td>押すと候補が開く</td>
+<td><code>都道府県はドロップダウンで</code></td>
+</tr>
+<tr>
+<td><strong>スライダー</strong></td>
+<td>つまみを動かして調整</td>
+<td><code>音量はスライダーで</code></td>
+</tr>
+<tr>
+<td><strong>ヘッダー</strong></td>
+<td>画面上部の帯</td>
+<td><code>ヘッダーにロゴを置いて</code></td>
+</tr>
+<tr>
+<td><strong>フッター</strong></td>
+<td>画面下部の帯</td>
+<td><code>フッターに会社情報を</code></td>
+</tr>
+<tr>
+<td><strong>ナビバー／ナビゲーション</strong></td>
+<td>案内メニューの並び</td>
+<td><code>上のナビに「お問い合わせ」を追加</code></td>
+</tr>
+<tr>
+<td><strong>サイドバー</strong></td>
+<td>横のメニュー列</td>
+<td><code>左のサイドバーを細くして</code></td>
+</tr>
+<tr>
+<td><strong>ハンバーガーメニュー</strong></td>
+<td>三本線の開閉ボタン</td>
+<td><code>スマホは右上にハンバーガーメニュー</code></td>
+</tr>
+<tr>
+<td><strong>パンくず（リスト）</strong></td>
+<td>現在地の道しるべ</td>
+<td><code>上にパンくずを表示して</code></td>
+</tr>
+<tr>
+<td><strong>タブ</strong></td>
+<td>切り替えて中身を出し分け</td>
+<td><code>「概要／詳細」のタブにして</code></td>
+</tr>
+<tr>
+<td><strong>モーダル／ダイアログ</strong></td>
+<td>手前に重なる小窓</td>
+<td><code>削除の確認はモーダルで</code></td>
+</tr>
+<tr>
+<td><strong>ポップアップ</strong></td>
+<td>重ねて出す小窓全般</td>
+<td><code>説明をポップアップで出して</code></td>
+</tr>
+<tr>
+<td><strong>トースト／スナックバー</strong></td>
+<td>一瞬出て消える通知</td>
+<td><code>保存したらトーストで知らせて</code></td>
+</tr>
+<tr>
+<td><strong>ツールチップ</strong></td>
+<td>乗せると出る吹き出し説明</td>
+<td><code>アイコンにツールチップを</code></td>
+</tr>
+<tr>
+<td><strong>アコーディオン</strong></td>
+<td>開閉する折りたたみ</td>
+<td><code>Q&amp;Aはアコーディオンに</code></td>
+</tr>
+<tr>
+<td><strong>カード</strong></td>
+<td>四角いパネルの区切り</td>
+<td><code>商品はカードで並べて</code></td>
+</tr>
+<tr>
+<td><strong>テーブル（表）</strong></td>
+<td>行と列の表</td>
+<td><code>一覧はテーブルで表示</code></td>
+</tr>
+<tr>
+<td><strong>リスト</strong></td>
+<td>縦に並ぶ項目</td>
+<td><code>箇条書きのリストにして</code></td>
+</tr>
+<tr>
+<td><strong>バッジ</strong></td>
+<td>件数・状態の小さな印</td>
+<td><code>未読数をバッジで</code></td>
+</tr>
+<tr>
+<td><strong>チップ／タグ</strong></td>
+<td>小さなラベル状の印</td>
+<td><code>カテゴリをタグで</code></td>
+</tr>
+<tr>
+<td><strong>アバター</strong></td>
+<td>丸いユーザー画像</td>
+<td><code>アバターを丸く表示</code></td>
+</tr>
+<tr>
+<td><strong>プログレスバー</strong></td>
+<td>進み具合の帯</td>
+<td><code>読み込み中はプログレスバーを</code></td>
+</tr>
+<tr>
+<td><strong>スピナー／ローダー</strong></td>
+<td>くるくる回る読込中の印</td>
+<td><code>読み込み中はスピナーを</code></td>
+</tr>
+<tr>
+<td><strong>ページネーション</strong></td>
+<td>ページ送りの番号</td>
+<td><code>下にページネーションを</code></td>
+</tr>
+<tr>
+<td><strong>カルーセル／スライダー</strong></td>
+<td>横スクロールの切替表示</td>
+<td><code>写真はカルーセルで</code></td>
+</tr>
+<tr>
+<td><strong>プレースホルダー</strong></td>
+<td>入力欄の薄い見本文字</td>
+<td><code>「例：山田太郎」のプレースホルダーを</code></td>
+</tr>
+<tr>
+<td><strong>ラベル</strong></td>
+<td>入力欄などの見出し文字</td>
+<td><code>入力欄の上にラベルを</code></td>
+</tr>
+<tr>
+<td><strong>フォーム</strong></td>
+<td>入力欄のまとまり</td>
+<td><code>問い合わせフォームを追加</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">名前が分からなくても大丈夫</p>
+<p>名前が出てこないときは <strong>「〇〇の右にある、押すと候補が下に出てくるやつ」</strong> のように、
+<strong>場所＋動き</strong> で説明すればOKです（このページの「3. 位置・領域」が役立ちます）。</p>
+</div>
+<hr />
+<h2 id="2">2. パーツの「状態」<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>同じボタンでも、<strong>ふだん／乗せたとき／押せないとき</strong> で見た目が変わります。
+「<strong>どの状態のとき</strong> を直すか」を言うと、ピンポイントで直せます。</p>
+<h3 id="_4">ボタンの状態<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="uv-grid" markdown="0">
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-states"><span class="uv-sb normal">送信</span><span class="uv-tag">通常（ふだん）</span><span class="uv-sb hover">送信</span><span class="uv-tag">ホバー（乗せたとき）</span><span class="uv-sb disabled">送信</span><span class="uv-tag">無効（押せない）</span><span class="uv-sb loading"><span class="uv-spin"></span>送信中</span><span class="uv-tag">読込中（処理中）</span></div></div>
+  <figcaption><b>ボタンの4状態</b><br>通常／ホバー／無効（disabled）／読込中。</figcaption>
+</figure>
+
+</div>
+
+<h3 id="_5">入力欄・タブの状態<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="uv-grid" markdown="0">
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-fields"><div class="uv-fld focus"><span class="l">お名前</span><span class="i"></span></div><div class="uv-fld error"><span class="l">メール</span><span class="i"></span><span class="e">形式が正しくありません</span></div></div></div>
+  <figcaption><b>フォーカス／エラー</b><br>選択中は枠が光る／エラーは赤くなる。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page" style="padding:0;"><div class="uv-seltabs"><span class="on">概要</span><span>詳細</span><span>口コミ</span></div><div style="padding:14px;font-size:10px;color:#999;">「概要」が選択中（アクティブ）</div></div></div>
+  <figcaption><b>選択中（アクティブ）</b><br>いま開いているタブ/項目の状態。</figcaption>
+</figure>
+
+</div>
+
+<table>
+<thead>
+<tr>
+<th>状態の言葉</th>
+<th>どんなとき</th>
+<th>こう頼む（例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通常（デフォルト）</strong></td>
+<td>ふだんの見た目</td>
+<td><code>通常時は薄いグレーで</code></td>
+</tr>
+<tr>
+<td><strong>ホバー</strong></td>
+<td>マウスを乗せたとき</td>
+<td><code>ホバーしたら色を濃くして</code></td>
+</tr>
+<tr>
+<td><strong>フォーカス</strong></td>
+<td>クリック/選択して入力できる状態</td>
+<td><code>フォーカス中は枠を青く光らせて</code></td>
+</tr>
+<tr>
+<td><strong>アクティブ／選択中</strong></td>
+<td>押している／いま選ばれている</td>
+<td><code>選択中のタブだけ太字に</code></td>
+</tr>
+<tr>
+<td><strong>無効（disabled／グレーアウト）</strong></td>
+<td>押せない状態</td>
+<td><code>未入力のうちは送信ボタンを無効に</code></td>
+</tr>
+<tr>
+<td><strong>読込中（ローディング）</strong></td>
+<td>処理を待っている</td>
+<td><code>送信中はスピナーを出してボタンを無効に</code></td>
+</tr>
+<tr>
+<td><strong>エラー</strong></td>
+<td>入力ミスや失敗</td>
+<td><code>メール欄がエラーなら赤枠と文言を</code></td>
+</tr>
+<tr>
+<td><strong>成功</strong></td>
+<td>完了した</td>
+<td><code>保存できたら緑のトーストを</code></td>
+</tr>
+<tr>
+<td><strong>空（からっぽ／empty state）</strong></td>
+<td>データが1件もない</td>
+<td><code>データが無いときは「まだありません」と表示</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">「〇〇のときだけ」と言うのがコツ</p>
+<p><code>ホバーのときだけ</code> <code>エラーのときだけ</code> のように <strong>状態を限定</strong> すると、ほかの状態を壊さずに直せます。</p>
+</div>
+<hr />
+<h2 id="3">3. 位置・領域の言い方<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>「どこの」を正確に言うための言葉です。<strong>パーツ名と組み合わせる</strong> と一気に伝わります。</p>
+<div class="uv-grid" markdown="0">
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-pos"><div class="uv-frame"><div class="uv-region uv-top">上部（ヘッダー）</div><div class="uv-region uv-left">左<br>サイド</div><div class="uv-region uv-center">中央</div><div class="uv-region uv-bottom">下部（フッター）</div></div></div></div>
+  <figcaption><b>領域の呼び名</b><br>上部／下部／左サイド／中央など、大きな場所。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-pos"><div class="uv-frame"><div class="uv-dot" style="top:8px;left:8px;">1</div><div class="uv-dot" style="top:8px;right:8px;">2</div><div class="uv-dot" style="bottom:8px;left:8px;">3</div><div class="uv-dot" style="bottom:8px;right:8px;">4</div></div></div></div>
+  <figcaption><b>四隅</b><br>①左上 ②右上 ③左下 ④右下。「右上のボタン」のように使う。</figcaption>
+</figure>
+
+</div>
+
+<table>
+<thead>
+<tr>
+<th>言い方</th>
+<th>意味</th>
+<th>組み合わせ例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>上部／下部</strong></td>
+<td>画面の上のほう／下のほう</td>
+<td><code>下部に固定でボタンを置いて</code></td>
+</tr>
+<tr>
+<td><strong>左／右／中央</strong></td>
+<td>横方向の位置</td>
+<td><code>見出しを中央寄せに</code></td>
+</tr>
+<tr>
+<td><strong>左上／右上／左下／右下</strong></td>
+<td>四隅</td>
+<td><code>右上に閉じるボタンを</code></td>
+</tr>
+<tr>
+<td><strong>〇〇の上／下</strong></td>
+<td>あるパーツの上下</td>
+<td><code>タイトルの下に説明文を</code></td>
+</tr>
+<tr>
+<td><strong>〇〇の隣／横</strong></td>
+<td>あるパーツの横</td>
+<td><code>アイコンの隣に文字を</code></td>
+</tr>
+<tr>
+<td><strong>〇〇の中</strong></td>
+<td>あるパーツの内側</td>
+<td><code>カードの中にボタンを</code></td>
+</tr>
+<tr>
+<td><strong>ファーストビュー</strong></td>
+<td>最初に見える1画面分</td>
+<td><code>ファーストビューに連絡先を</code></td>
+</tr>
+<tr>
+<td><strong>画面の外（はみ出し）</strong></td>
+<td>表示領域からあふれている</td>
+<td><code>スマホで表が画面外にはみ出してる</code></td>
+</tr>
+<tr>
+<td><strong>固定（sticky／追従）</strong></td>
+<td>スクロールしても付いてくる</td>
+<td><code>ヘッダーを上に固定して</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">「上」「下」は基準を添えると確実</p>
+<p>ただ「上に」だと画面の上か、あるパーツの上か紛れます。
+<strong>「タイトルの下」「ヘッダーの中の右」</strong> のように <strong>基準のパーツ名</strong> を添えると誤解がありません。</p>
+</div>
+<hr />
+<h2 id="4">4. そのまま使える修正依頼フレーズ集<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>「パーツ名 ＋ 場所 ＋ 状態 ＋ どうしたい」の型です。コピーして、<code>〇〇</code> の部分を書き換えて使ってください。</p>
+<div class="highlight"><pre><span></span><code>【見た目を変える】
+・ヘッダー右上の「ログイン」ボタンを、もう少し大きく・濃い青にして。
+・カードの角丸をもっと大きくして、軽い影をつけて。
+・本文の文字が小さいので、1段階大きくして行間も広げて。
+
+【状態を変える】
+・送信ボタンは、未入力のうちは無効（グレーアウト）にして、押せないようにして。
+・入力欄にマウスを乗せた（ホバー）ときだけ、枠を少し濃くして。
+・送信中はボタンをスピナー表示にして、二重送信できないようにして。
+
+【場所を変える・追加する】
+・スマホのとき、ナビを右上のハンバーガーメニューにまとめて。
+・フッターの中央に、コピーライトを1行で追加して。
+・一覧の下にページネーションを置いて。
+
+【直してほしい不具合】
+・スマホで表が画面の右にはみ出しているので、収まるようにして。
+・モーダルを閉じるボタン（右上の×）が効かないので直して。
+・エラーのとき、入力欄が赤くならないので赤枠とメッセージを出して。
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">「どこを」が分かる画面を見せるともっと早い</p>
+<p>可能なら <strong>スクリーンショット</strong> を貼って <code>この赤丸のボタン</code> のように指せると、名前が曖昧でも確実に伝わります。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">貼る前の確認</p>
+<p>スクリーンショットや文章に <strong>実在の顧客名・案件名・社内システム名や認証情報（パスワード・APIキー等）</strong> が写り込んでいないか確認してください（→ <a href="../ai-safety/">AIと安全に付き合う</a>）。</p>
+</div>
+<hr />
+<h2 id="_6">このページのまとめ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>パーツの呼び名</strong>（ボタン・モーダル・トグルなど）が分かった</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>状態</strong>（ホバー・無効・読込中・エラーなど）を限定して頼める</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>位置・領域</strong>（右上・〇〇の下・固定など）で場所を正確に指せる</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 「<strong>パーツ名 ＋ 場所 ＋ 状態</strong>」の3点セットで一発で伝わる</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> スクショや依頼文に <strong>実在の顧客名・機密</strong> は入れない</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">次のステップ</p>
+<p>見た目の言葉も合わせて使うと、もっと思い通りになります。</p>
+<p>👉 <a href="../design-vocab/">デザインを言葉で伝える</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../design-vocab/" class="md-footer__link md-footer__link--prev" aria-label="前: デザインを言葉で伝える">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                前
+              </span>
+              <div class="md-ellipsis">
+                デザインを言葉で伝える
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ai-errors/" class="md-footer__link md-footer__link--next" aria-label="次: エラーとの付き合い方">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                次
+              </span>
+              <div class="md-ellipsis">
+                エラーとの付き合い方
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © はじめてのGitHub 入門ガイド
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
