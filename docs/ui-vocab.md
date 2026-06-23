@@ -163,6 +163,32 @@
 .uv-xcol{display:inline-flex;flex-direction:column;gap:3px;align-items:flex-start;}
 .uv-xcol .l{font-size:7.5px;color:#888;}
 .uv-xicon{font-size:13px;line-height:1;}
+/* 早見表用：モーダル（暗背景＋白窓）／ポップアップ（明るい小窓）の差 */
+.uv-xmodal{display:inline-flex;align-items:center;justify-content:center;width:40px;height:26px;border-radius:4px;background:#6b6b76;}
+.uv-xmodal i{width:24px;height:15px;border-radius:2px;background:#fff;}
+.uv-xpop{display:inline-flex;flex-direction:column;width:40px;border:1px solid #e0e2ee;border-radius:4px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.18);overflow:hidden;}
+.uv-xpop i{height:8px;border-bottom:1px solid #f0f0f4;}
+.uv-xpop i:last-child{border-bottom:none;}
+
+/* === モーダル / ダイアログ / ポップアップ 比較見本 === */
+.uv-cmp{padding:0;min-height:150px;position:relative;overflow:hidden;}
+.uv-cmp .bg{padding:14px;display:flex;flex-direction:column;gap:8px;height:150px;}
+.uv-cmp .bg .ln{height:8px;border-radius:4px;background:#e6e6ef;}
+.uv-cmp .bg .ln.s{width:55%;}
+.uv-cmp.dim::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);}
+.uv-cmp .win{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:78%;background:#fff;border-radius:9px;box-shadow:0 8px 24px rgba(0,0,0,.35);padding:13px 12px;text-align:center;}
+.uv-cmp .win .t{font-size:11px;font-weight:700;color:#222;margin-bottom:6px;}
+.uv-cmp .win .dd{font-size:9px;color:#999;margin-bottom:10px;line-height:1.4;}
+.uv-cmp .win .fi{height:13px;border:1px solid #dcdce3;border-radius:3px;margin-bottom:6px;background:#fafafe;}
+.uv-cmp .win .btns{display:flex;gap:6px;justify-content:center;}
+.uv-cmp .win .b{font-size:9px;padding:6px 0;border-radius:5px;font-weight:700;flex:1;}
+.uv-cmp .win .b.p{background:#4f46e5;color:#fff;}
+.uv-cmp .win .b.s{background:#eef0f7;color:#666;}
+.uv-cmp .pop-btn{position:absolute;top:56%;left:50%;transform:translateX(-50%);font-size:10px;padding:7px 14px;background:#4f46e5;color:#fff;border-radius:7px;font-weight:600;}
+.uv-cmp .pop-menu{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);margin-top:-4px;background:#fff;border:1px solid #e0e2ee;border-radius:7px;box-shadow:0 6px 18px rgba(0,0,0,.2);width:96px;overflow:hidden;z-index:2;}
+.uv-cmp .pop-menu div{font-size:9px;padding:6px 11px;color:#444;text-align:left;}
+.uv-cmp .pop-menu div+div{border-top:1px solid #f1f1f5;}
+.uv-cmp .pop-menu::after{content:"";position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#fff;border-bottom:0;}
 </style>
 
 ---
@@ -228,8 +254,8 @@
 | **ハンバーガーメニュー** | <span class="uv-s uv-xburger"><i></i><i></i><i></i></span> | 三本線の開閉ボタン | `スマホは右上にハンバーガーメニュー` |
 | **パンくず（リスト）** | <span class="uv-s uv-xcrumb">ホーム ＞ <b>商品</b></span> | 現在地の道しるべ | `上にパンくずを表示して` |
 | **タブ** | <span class="uv-s uv-xtabs"><i class="on">概要</i><i>詳細</i></span> | 切り替えて中身を出し分け | `「概要／詳細」のタブにして` |
-| **モーダル／ダイアログ** | <span class="uv-s uv-xwin"><i></i><i></i><i class="b"></i></span> | 手前に重なる小窓 | `削除の確認はモーダルで` |
-| **ポップアップ** | <span class="uv-s uv-xwin"><i></i><i></i><i class="b"></i></span> | 重ねて出す小窓全般 | `説明をポップアップで出して` |
+| **モーダル／ダイアログ** | <span class="uv-s uv-xmodal"><i></i></span> | 背景を暗くして操作を止める小窓 | `削除の確認はモーダルで` |
+| **ポップアップ** | <span class="uv-s uv-xpop"><i></i><i></i></span> | その場にふわっと出る軽い表示 | `メニューはポップアップで` |
 | **トースト／スナックバー** | <span class="uv-s uv-xtoast">保存しました</span> | 一瞬出て消える通知 | `保存したらトーストで知らせて` |
 | **ツールチップ** | <span class="uv-s uv-xtip2">説明</span> | 乗せると出る吹き出し説明 | `アイコンにツールチップを` |
 | **アコーディオン** | <span class="uv-s uv-xacc">配送について <b>＋</b></span> | 開閉する折りたたみ | `Q&Aはアコーディオンに` |
@@ -250,6 +276,48 @@
 !!! tip "名前が分からなくても大丈夫"
     名前が出てこないときは **「〇〇の右にある、押すと候補が下に出てくるやつ」** のように、
     **場所＋動き** で説明すればOKです（このページの「3. 位置・領域」が役立ちます）。
+
+### まぎらわしい：モーダル・ダイアログ・ポップアップの違い
+
+**結論：「ポップアップ」は軽くその場に出る表示、「モーダル」は背景を暗くして操作を止める“出し方”、「ダイアログ」は確認・選択を求める“小窓そのもの”です。**
+
+<div class="uv-grid" markdown="0">
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-cmp pop"><div class="bg"><div class="ln"></div><div class="ln s"></div><div class="ln"></div></div><div class="pop-menu"><div>編集する</div><div>削除する</div></div><div class="pop-btn">メニュー ▾</div></div></div>
+  <figcaption><b>ポップアップ</b><br>背景は暗くならない。外を押せば消える“軽い”表示（メニューなど）。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-cmp dim"><div class="bg"><div class="ln"></div><div class="ln s"></div><div class="ln"></div></div><div class="win"><div class="t">ログイン</div><div class="fi"></div><div class="fi"></div><div class="btns"><span class="b p">ログイン</span></div></div></div></div>
+  <figcaption><b>モーダル</b><br>背景を暗くして、閉じるまで他を触れなくする“出し方”。</figcaption>
+</figure>
+
+<figure class="uv-item">
+  <div class="uv-screen"><div class="uv-bar"><i></i><i></i><i></i></div>
+  <div class="uv-page uv-cmp dim"><div class="bg"><div class="ln"></div><div class="ln s"></div><div class="ln"></div></div><div class="win"><div class="t">削除しますか？</div><div class="dd">この操作は元に戻せません。</div><div class="btns"><span class="b s">キャンセル</span><span class="b p">削除</span></div></div></div></div>
+  <figcaption><b>ダイアログ</b><br>確認・選択を求める小窓（中身）。多くは「モーダルで」出します。</figcaption>
+</figure>
+
+</div>
+
+**理由（見分け方）：**
+
+- **ポップアップ** … 背景は暗くならず、外をクリックすれば消える。メニューや吹き出しなど“軽い”表示の総称。
+- **モーダル** … 背景を暗く（オーバーレイ）して、閉じるまで他を操作させない。注意を1点に集めたいときの“出し方”。
+- **ダイアログ** … 「削除しますか？」のように、確認・選択・入力を求める小窓（＝中身）。その多くを「モーダルで」出します。
+
+| 言葉 | 何を表す | 背景 | よくある例 |
+|---|---|---|---|
+| **ポップアップ** | 出し方（軽い） | 暗くしない | メニュー・吹き出し |
+| **モーダル** | 出し方（重い） | 暗くして止める | ログイン・画像の拡大表示 |
+| **ダイアログ** | 中身（役割） | モーダルで出すことが多い | 削除確認・保存確認 |
+
+!!! note "頼むときはこれで十分"
+    厳密な線引きを覚えなくても、**「削除の確認はモーダルで」「操作メニューはポップアップで」** のように
+    *どう出したいか* を添えれば伝わります。確認・選択の小窓を指したいときは「ダイアログ」を使いましょう。
 
 ---
 
