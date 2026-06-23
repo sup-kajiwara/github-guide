@@ -1455,6 +1455,74 @@
 .uv-dropdown .h{padding:6px 10px;display:flex;justify-content:space-between;color:#333;background:#fff;}
 .uv-dropdown .h span{color:#999;}
 .uv-dropdown .o{padding:5px 10px;background:#f5f6fc;color:#4f46e5;border-top:1px solid #eee;}
+
+/* === 早見表・状態表のインライン見本（uv-s で縦位置をそろえる）=== */
+.uv-s{vertical-align:middle;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1;}
+.uv-xbtn{display:inline-block;font-size:8px;padding:3px 9px;border-radius:5px;background:#4f46e5;color:#fff;font-weight:700;white-space:nowrap;}
+.uv-xbtn.g{background:#dcdce3;color:#9a9aa3;}
+.uv-xbtn.d{background:#3d35c9;box-shadow:0 3px 8px rgba(79,70,229,.45);}
+.uv-xlink{font-size:10px;color:#4f46e5;text-decoration:underline;}
+.uv-xinput{display:inline-block;width:50px;height:14px;border:1px solid #c4c4cc;border-radius:3px;background:#fff;}
+.uv-xinput.f{border-color:#4f46e5;box-shadow:0 0 0 2px rgba(79,70,229,.25);}
+.uv-xinput.e{border-color:#e5484d;box-shadow:0 0 0 2px rgba(229,72,77,.2);}
+.uv-xph{display:inline-block;font-size:7.5px;color:#b4b4be;border:1px solid #c4c4cc;border-radius:3px;padding:3px 6px;background:#fff;}
+.uv-xchk{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;border-radius:3px;background:#4f46e5;color:#fff;font-size:9px;font-weight:900;}
+.uv-xradio{display:inline-block;width:13px;height:13px;border:2px solid #4f46e5;border-radius:50%;background:radial-gradient(#4f46e5 38%,#fff 44%);}
+.uv-xtog{display:inline-block;width:26px;height:14px;border-radius:999px;background:#4f46e5;position:relative;}
+.uv-xtog::after{content:"";position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff;}
+.uv-xsel{display:inline-flex;align-items:center;gap:6px;font-size:8px;color:#444;border:1px solid #c4c4cc;border-radius:4px;padding:3px 7px;background:#fff;}
+.uv-xsel b{color:#999;font-weight:400;}
+.uv-xslider{display:inline-block;width:54px;height:4px;border-radius:999px;background:#d8d8e2;position:relative;}
+.uv-xslider::before{content:"";position:absolute;left:0;width:55%;height:100%;border-radius:999px;background:#4f46e5;}
+.uv-xslider::after{content:"";position:absolute;left:50%;top:50%;transform:translateY(-50%);width:11px;height:11px;border-radius:50%;background:#4f46e5;box-shadow:0 1px 3px rgba(0,0,0,.3);}
+.uv-xbar{display:inline-flex;align-items:center;gap:5px;width:64px;height:15px;border-radius:3px;background:#4f46e5;padding:0 5px;}
+.uv-xbar i{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);}
+.uv-xbar.foot{background:#26262e;}
+.uv-xbar.nav{background:#fff;border:1px solid #e0e2ee;}
+.uv-xbar.nav i{background:#4f46e5;width:13px;height:4px;border-radius:2px;}
+.uv-xside{display:inline-flex;width:50px;height:30px;border-radius:3px;overflow:hidden;border:1px solid #e0e2ee;}
+.uv-xside::before{content:"";width:16px;background:#2b2b39;}
+.uv-xside::after{content:"";flex:1;background:#f4f4f8;}
+.uv-xburger{display:inline-flex;flex-direction:column;gap:3px;}
+.uv-xburger i{width:15px;height:2px;border-radius:2px;background:#444;}
+.uv-xcrumb{font-size:8.5px;color:#999;white-space:nowrap;}
+.uv-xcrumb b{color:#4f46e5;font-weight:700;}
+.uv-xtabs{display:inline-flex;font-size:8px;border-bottom:2px solid #e3e3ee;}
+.uv-xtabs i{padding:3px 7px;color:#999;}
+.uv-xtabs i.on{color:#4f46e5;border-bottom:2px solid #4f46e5;margin-bottom:-2px;font-weight:700;}
+.uv-xwin{display:inline-flex;flex-direction:column;gap:3px;width:48px;padding:6px;border-radius:5px;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.25);border:1px solid #eee;}
+.uv-xwin i{height:3px;border-radius:2px;background:#e0e0e8;}
+.uv-xwin i.b{height:7px;width:60%;background:#4f46e5;margin-top:2px;}
+.uv-xtoast{display:inline-flex;align-items:center;gap:4px;font-size:8px;color:#fff;background:#26262e;padding:4px 8px;border-radius:5px;}
+.uv-xtoast::before{content:"✓";color:#5be584;font-weight:700;}
+.uv-xtip2{display:inline-block;position:relative;font-size:8px;color:#fff;background:#4f46e5;padding:3px 7px;border-radius:4px;}
+.uv-xtip2::after{content:"";position:absolute;bottom:-4px;left:9px;border:4px solid transparent;border-top-color:#4f46e5;border-bottom:0;}
+.uv-xacc{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;font-size:8px;color:#444;border:1px solid #e0e2ee;border-radius:4px;padding:4px 7px;background:#f5f6fc;}
+.uv-xacc b{color:#4f46e5;font-weight:900;}
+.uv-xcard{display:inline-block;width:34px;height:24px;border-radius:4px;background:#eef0f7;border:1px solid #e0e2ee;}
+.uv-xtable{display:inline-grid;grid-template-columns:repeat(3,11px);grid-auto-rows:7px;gap:1px;}
+.uv-xtable i{background:#dfe0ea;}
+.uv-xtable i.h{background:#9a9ab0;}
+.uv-xlist{display:inline-flex;flex-direction:column;gap:3px;}
+.uv-xlist i{display:flex;align-items:center;gap:4px;}
+.uv-xlist i::before{content:"";width:3px;height:3px;border-radius:50%;background:#4f46e5;}
+.uv-xlist i::after{content:"";width:26px;height:3px;border-radius:2px;background:#dfe0ea;}
+.uv-xbadge{display:inline-flex;align-items:center;justify-content:center;min-width:14px;height:14px;border-radius:999px;background:#e5484d;color:#fff;font-size:8px;font-weight:700;padding:0 3px;}
+.uv-xchip2{display:inline-flex;align-items:center;gap:4px;font-size:8px;color:#444;background:#eef0f7;border:1px solid #e0e2ee;border-radius:999px;padding:2px 8px;}
+.uv-xchip2 b{color:#aaa;font-weight:400;}
+.uv-xavatar{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#5b54f0,#8b5cf6);color:#fff;font-size:9px;font-weight:700;}
+.uv-xprog{display:inline-block;width:50px;height:6px;border-radius:999px;background:#e3e3ee;overflow:hidden;position:relative;}
+.uv-xprog::after{content:"";position:absolute;left:0;top:0;height:100%;width:62%;background:#4f46e5;}
+.uv-xspin2{display:inline-block;width:12px;height:12px;border:2px solid #d8d8e2;border-top-color:#4f46e5;border-radius:50%;animation:uvspin .8s linear infinite;}
+.uv-xpage{display:inline-flex;gap:3px;}
+.uv-xpage i{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;border-radius:3px;border:1px solid #e0e2ee;font-size:8px;color:#666;}
+.uv-xpage i.on{background:#4f46e5;color:#fff;border-color:#4f46e5;}
+.uv-xcaro{display:inline-flex;align-items:center;gap:5px;font-size:10px;color:#4f46e5;font-weight:700;}
+.uv-xcaro i{display:inline-block;width:26px;height:17px;border-radius:3px;background:#eef0f7;border:1px solid #e0e2ee;}
+.uv-xempty{display:inline-flex;align-items:center;justify-content:center;width:62px;height:22px;border:1px dashed #c4c4cc;border-radius:4px;font-size:7.5px;color:#999;}
+.uv-xcol{display:inline-flex;flex-direction:column;gap:3px;align-items:flex-start;}
+.uv-xcol .l{font-size:7.5px;color:#888;}
+.uv-xicon{font-size:13px;line-height:1;}
 </style>
 
 <hr />
@@ -1501,6 +1569,7 @@
 <thead>
 <tr>
 <th>パーツ名</th>
+<th>見本</th>
 <th>どんなもの</th>
 <th>こう頼む（例）</th>
 </tr>
@@ -1508,171 +1577,205 @@
 <tbody>
 <tr>
 <td><strong>ボタン</strong></td>
+<td><span class="uv-s uv-xbtn">送信</span></td>
 <td>押す操作の部品</td>
 <td><code>「送信」ボタンを大きくして</code></td>
 </tr>
 <tr>
 <td><strong>リンク</strong></td>
+<td><span class="uv-s uv-xlink">詳しく見る</span></td>
 <td>押すと別ページへ飛ぶ文字</td>
 <td><code>下線付きのリンクにして</code></td>
 </tr>
 <tr>
 <td><strong>アイコン</strong></td>
+<td><span class="uv-s uv-xicon">🗑️</span></td>
 <td>絵文字状の小さな図記号</td>
 <td><code>ゴミ箱アイコンを赤くして</code></td>
 </tr>
 <tr>
 <td><strong>入力欄（テキストフィールド）</strong></td>
+<td><span class="uv-s uv-xinput"></span></td>
 <td>文字を打ち込む枠</td>
 <td><code>入力欄の幅を広げて</code></td>
 </tr>
 <tr>
 <td><strong>チェックボックス</strong></td>
+<td><span class="uv-s uv-xchk">✓</span></td>
 <td>オン/オフの四角い印</td>
 <td><code>「同意する」をチェックボックスに</code></td>
 </tr>
 <tr>
 <td><strong>ラジオボタン</strong></td>
+<td><span class="uv-s uv-xradio"></span></td>
 <td>1つだけ選ぶ丸い印</td>
 <td><code>性別はラジオボタンで</code></td>
 </tr>
 <tr>
 <td><strong>トグル（スイッチ）</strong></td>
+<td><span class="uv-s uv-xtog"></span></td>
 <td>オン/オフの切替スイッチ</td>
 <td><code>通知設定はトグルで</code></td>
 </tr>
 <tr>
 <td><strong>ドロップダウン／セレクト</strong></td>
+<td><span class="uv-s uv-xsel">東京都 <b>▾</b></span></td>
 <td>押すと候補が開く</td>
 <td><code>都道府県はドロップダウンで</code></td>
 </tr>
 <tr>
 <td><strong>スライダー</strong></td>
+<td><span class="uv-s uv-xslider"></span></td>
 <td>つまみを動かして調整</td>
 <td><code>音量はスライダーで</code></td>
 </tr>
 <tr>
 <td><strong>ヘッダー</strong></td>
+<td><span class="uv-s uv-xbar"><i></i><i></i></span></td>
 <td>画面上部の帯</td>
 <td><code>ヘッダーにロゴを置いて</code></td>
 </tr>
 <tr>
 <td><strong>フッター</strong></td>
+<td><span class="uv-s uv-xbar foot"><i></i><i></i></span></td>
 <td>画面下部の帯</td>
 <td><code>フッターに会社情報を</code></td>
 </tr>
 <tr>
 <td><strong>ナビバー／ナビゲーション</strong></td>
+<td><span class="uv-s uv-xbar nav"><i></i><i></i><i></i></span></td>
 <td>案内メニューの並び</td>
 <td><code>上のナビに「お問い合わせ」を追加</code></td>
 </tr>
 <tr>
 <td><strong>サイドバー</strong></td>
+<td><span class="uv-s uv-xside"></span></td>
 <td>横のメニュー列</td>
 <td><code>左のサイドバーを細くして</code></td>
 </tr>
 <tr>
 <td><strong>ハンバーガーメニュー</strong></td>
+<td><span class="uv-s uv-xburger"><i></i><i></i><i></i></span></td>
 <td>三本線の開閉ボタン</td>
 <td><code>スマホは右上にハンバーガーメニュー</code></td>
 </tr>
 <tr>
 <td><strong>パンくず（リスト）</strong></td>
+<td><span class="uv-s uv-xcrumb">ホーム ＞ <b>商品</b></span></td>
 <td>現在地の道しるべ</td>
 <td><code>上にパンくずを表示して</code></td>
 </tr>
 <tr>
 <td><strong>タブ</strong></td>
+<td><span class="uv-s uv-xtabs"><i class="on">概要</i><i>詳細</i></span></td>
 <td>切り替えて中身を出し分け</td>
 <td><code>「概要／詳細」のタブにして</code></td>
 </tr>
 <tr>
 <td><strong>モーダル／ダイアログ</strong></td>
+<td><span class="uv-s uv-xwin"><i></i><i></i><i class="b"></i></span></td>
 <td>手前に重なる小窓</td>
 <td><code>削除の確認はモーダルで</code></td>
 </tr>
 <tr>
 <td><strong>ポップアップ</strong></td>
+<td><span class="uv-s uv-xwin"><i></i><i></i><i class="b"></i></span></td>
 <td>重ねて出す小窓全般</td>
 <td><code>説明をポップアップで出して</code></td>
 </tr>
 <tr>
 <td><strong>トースト／スナックバー</strong></td>
+<td><span class="uv-s uv-xtoast">保存しました</span></td>
 <td>一瞬出て消える通知</td>
 <td><code>保存したらトーストで知らせて</code></td>
 </tr>
 <tr>
 <td><strong>ツールチップ</strong></td>
+<td><span class="uv-s uv-xtip2">説明</span></td>
 <td>乗せると出る吹き出し説明</td>
 <td><code>アイコンにツールチップを</code></td>
 </tr>
 <tr>
 <td><strong>アコーディオン</strong></td>
+<td><span class="uv-s uv-xacc">配送について <b>＋</b></span></td>
 <td>開閉する折りたたみ</td>
 <td><code>Q&amp;Aはアコーディオンに</code></td>
 </tr>
 <tr>
 <td><strong>カード</strong></td>
+<td><span class="uv-s uv-xcard"></span></td>
 <td>四角いパネルの区切り</td>
 <td><code>商品はカードで並べて</code></td>
 </tr>
 <tr>
 <td><strong>テーブル（表）</strong></td>
+<td><span class="uv-s uv-xtable"><i class="h"></i><i class="h"></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i></span></td>
 <td>行と列の表</td>
 <td><code>一覧はテーブルで表示</code></td>
 </tr>
 <tr>
 <td><strong>リスト</strong></td>
+<td><span class="uv-s uv-xlist"><i></i><i></i><i></i></span></td>
 <td>縦に並ぶ項目</td>
 <td><code>箇条書きのリストにして</code></td>
 </tr>
 <tr>
 <td><strong>バッジ</strong></td>
+<td><span class="uv-s uv-xbadge">3</span></td>
 <td>件数・状態の小さな印</td>
 <td><code>未読数をバッジで</code></td>
 </tr>
 <tr>
 <td><strong>チップ／タグ</strong></td>
+<td><span class="uv-s uv-xchip2">下書き <b>×</b></span></td>
 <td>小さなラベル状の印</td>
 <td><code>カテゴリをタグで</code></td>
 </tr>
 <tr>
 <td><strong>アバター</strong></td>
+<td><span class="uv-s uv-xavatar">A</span></td>
 <td>丸いユーザー画像</td>
 <td><code>アバターを丸く表示</code></td>
 </tr>
 <tr>
 <td><strong>プログレスバー</strong></td>
+<td><span class="uv-s uv-xprog"></span></td>
 <td>進み具合の帯</td>
 <td><code>読み込み中はプログレスバーを</code></td>
 </tr>
 <tr>
 <td><strong>スピナー／ローダー</strong></td>
+<td><span class="uv-s uv-xspin2"></span></td>
 <td>くるくる回る読込中の印</td>
 <td><code>読み込み中はスピナーを</code></td>
 </tr>
 <tr>
 <td><strong>ページネーション</strong></td>
+<td><span class="uv-s uv-xpage"><i class="on">1</i><i>2</i><i>3</i></span></td>
 <td>ページ送りの番号</td>
 <td><code>下にページネーションを</code></td>
 </tr>
 <tr>
 <td><strong>カルーセル／スライダー</strong></td>
+<td><span class="uv-s uv-xcaro">‹ <i></i> ›</span></td>
 <td>横スクロールの切替表示</td>
 <td><code>写真はカルーセルで</code></td>
 </tr>
 <tr>
 <td><strong>プレースホルダー</strong></td>
+<td><span class="uv-s uv-xph">例：山田太郎</span></td>
 <td>入力欄の薄い見本文字</td>
 <td><code>「例：山田太郎」のプレースホルダーを</code></td>
 </tr>
 <tr>
 <td><strong>ラベル</strong></td>
+<td><span class="uv-s uv-xcol"><span class="l">お名前</span><span class="uv-xinput"></span></span></td>
 <td>入力欄などの見出し文字</td>
 <td><code>入力欄の上にラベルを</code></td>
 </tr>
 <tr>
 <td><strong>フォーム</strong></td>
+<td><span class="uv-s uv-xcol"><span class="uv-xinput"></span><span class="uv-xinput"></span><span class="uv-xbtn">送信</span></span></td>
 <td>入力欄のまとまり</td>
 <td><code>問い合わせフォームを追加</code></td>
 </tr>
@@ -1719,6 +1822,7 @@
 <thead>
 <tr>
 <th>状態の言葉</th>
+<th>見本</th>
 <th>どんなとき</th>
 <th>こう頼む（例）</th>
 </tr>
@@ -1726,46 +1830,55 @@
 <tbody>
 <tr>
 <td><strong>通常（デフォルト）</strong></td>
+<td><span class="uv-s uv-xbtn">送信</span></td>
 <td>ふだんの見た目</td>
 <td><code>通常時は薄いグレーで</code></td>
 </tr>
 <tr>
 <td><strong>ホバー</strong></td>
+<td><span class="uv-s uv-xbtn d">送信</span></td>
 <td>マウスを乗せたとき</td>
 <td><code>ホバーしたら色を濃くして</code></td>
 </tr>
 <tr>
 <td><strong>フォーカス</strong></td>
+<td><span class="uv-s uv-xinput f"></span></td>
 <td>クリック/選択して入力できる状態</td>
 <td><code>フォーカス中は枠を青く光らせて</code></td>
 </tr>
 <tr>
 <td><strong>アクティブ／選択中</strong></td>
+<td><span class="uv-s uv-xtabs"><i class="on">概要</i><i>詳細</i></span></td>
 <td>押している／いま選ばれている</td>
 <td><code>選択中のタブだけ太字に</code></td>
 </tr>
 <tr>
 <td><strong>無効（disabled／グレーアウト）</strong></td>
+<td><span class="uv-s uv-xbtn g">送信</span></td>
 <td>押せない状態</td>
 <td><code>未入力のうちは送信ボタンを無効に</code></td>
 </tr>
 <tr>
 <td><strong>読込中（ローディング）</strong></td>
+<td><span class="uv-s uv-xspin2"></span></td>
 <td>処理を待っている</td>
 <td><code>送信中はスピナーを出してボタンを無効に</code></td>
 </tr>
 <tr>
 <td><strong>エラー</strong></td>
+<td><span class="uv-s uv-xinput e"></span></td>
 <td>入力ミスや失敗</td>
 <td><code>メール欄がエラーなら赤枠と文言を</code></td>
 </tr>
 <tr>
 <td><strong>成功</strong></td>
+<td><span class="uv-s uv-xtoast">保存しました</span></td>
 <td>完了した</td>
 <td><code>保存できたら緑のトーストを</code></td>
 </tr>
 <tr>
 <td><strong>空（からっぽ／empty state）</strong></td>
+<td><span class="uv-s uv-xempty">まだありません</span></td>
 <td>データが1件もない</td>
 <td><code>データが無いときは「まだありません」と表示</code></td>
 </tr>
