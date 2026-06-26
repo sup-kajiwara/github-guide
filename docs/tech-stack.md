@@ -55,12 +55,12 @@
 
 【技術スタック（社内標準）】
 - パッケージマネージャー: pnpm
-- フルスタックフレームワーク: TanStack Start（型安全ルーティング / Viteベース）
+- フルスタックフレームワーク: TanStack Start
 - ビルドツール: Vite
 - UIコンポーネント: ark-ui
 - CSS: Tailwind CSS + Tailwind Variants
 - バリデーション: zod
-- 認証: better-auth（二要素認証を使う）
+- 認証: better-auth
 - ORM: drizzle-orm
 - データベース: PostgreSQL
 - テスト: Vitest
