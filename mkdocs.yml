@@ -43,7 +43,10 @@ not_in_nav: |
 # グループは折りたたみ式。いま見ている章のグループだけ自動で開きます。
 nav:
   - はじめに: index.md
-  - 用語集（まずはここから）: glossary.md
+  - 用語集:
+      - GitHubの用語集（まずはここから）: glossary.md
+      - デザインの用語集: design-vocab.md
+      - UI/UXの用語集: ui-vocab.md
   - AIで開発するとは: ai-intro.md
   - 準備する:
       - アカウント作成と初期設定: account-setup.md
@@ -55,8 +58,6 @@ nav:
   - つくってみる:
       - 練習：通しでやってみる: practice.md
       - AIで作ってみる（ハンズオン）: ai-build.md
-  - デザインを言葉で伝える: design-vocab.md
-  - UI/UX用語集（パーツの名前で直す）: ui-vocab.md
   - エラーとの付き合い方: ai-errors.md
   - 安全に使う:
       - 情報を守る（GitHub）: security.md
