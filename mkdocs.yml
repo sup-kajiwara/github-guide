@@ -50,7 +50,6 @@ nav:
       - PCの準備（VSCode・Git・Claude）: setup-pc.md
   - GitHubの基本:
       - 最初の一歩（リポジトリを作る）: first-steps.md
-      - リポジトリの名前の付け方（命名規則）: repo-naming.md
       - 変更を記録する（コミット）: commit-push.md
       - みんなで使う（プルリク・マージ）: collaboration.md
   - つくってみる:
@@ -62,8 +61,10 @@ nav:
   - 安全に使う:
       - 情報を守る（GitHub）: security.md
       - AIと安全に付き合う: ai-safety.md
-  - もっと深く:
+  - 社内ルール:
       - 推奨技術スタック: tech-stack.md
+      - リポジトリの名前の付け方（命名規則）: repo-naming.md
+  - もっと深く:
       - もっと使う（上級編）: advanced.md
       - 困ったときのQ&A: troubleshooting.md
       - 付録：Claudeの頼み方とMarkdown: appendix.md
