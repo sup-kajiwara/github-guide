@@ -46,6 +46,7 @@ nav:
   - 用語集:
       - GitHubの用語集（まずはここから）: glossary.md
       - 基本のIT用語集: it-basics.md
+      - Claudeの用語集: claude-terms.md
       - デザインの用語集: design-vocab.md
       - UI/UXの用語集: ui-vocab.md
   - AIで開発するとは: ai-intro.md
